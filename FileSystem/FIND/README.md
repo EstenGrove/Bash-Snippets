@@ -2,7 +2,8 @@
 
 ## Syntax
 ```bash
-find <directory> -flags <search-item>
+# syntax
+find <directory-to-search-in> -flags <search-item>
 ```
 
 ### List All Files Recursively
