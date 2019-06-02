@@ -25,15 +25,15 @@ alias BASH='nano .bash_profile'     # Change/Edit the .bash_profile
 ```bash
 # NETWORKING AND RESOURCE-RELATED ALIASES
 
-alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"        # flush dns cache
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"   # flush dns cache
 
-alias myip='curl https://ipinfo.io/ip'                                               # get public IP
+alias myip='curl https://ipinfo.io/ip'                                          # get public IP
 
-alias netCons='lsof -i'                                                              # show all open TCP/IP sockets
+alias netCons='lsof -i'                                                         # show all open TCP/IP sockets
 
-alias memHogs='top -l 1 -o rsize | head -20'                                         # Get the memory hogging processes (ie. most memory-intensive processes)
+alias memHogs='top -l 1 -o rsize | head -20'                                    # Get the memory hogging processes (ie. most memory-intensive processes)
 
-alias openPorts='sudo lsof -i | grep LISTEN'                                         # Get all LISTENING ports
+alias openPorts='sudo lsof -i | grep LISTEN'                                    # Get all LISTENING ports
 
-alias showBlocked='sudo ipfw list'                                                   # Show all ipfw blocked/blacklisted IP
+alias showBlocked='sudo ipfw list'                                              # Show all ipfw blocked/blacklisted IP
 ```
