@@ -95,8 +95,34 @@ find . -type f -mtime -2 -atime 30
 find . -type f -ls | grep "Oct 10" 
 ```
 
+-----------------------
+## Search All Files/Directories Based on Size
+Uses the ```-size``` flag.
+__Options:__
+- ```c```: bytes
+- ```k```: kilobytes
+- ```m```: megabytes
+- ```g```: gigibytes
+
+### Find All Files That Are 20Megabytes
+```bash
+find . -size 20M
+```
+
+### Find All Files That Are *Less Than* 20Megabytes
+```bash 
+find . -size -20M
+```
+
+### Find All Files That Are *Larger Than* 1Gigabyte
+```bash
+find . -size +1G
+```
+
 
 -----------------------
+
+
 ## Search Based On Permissions
 
 
