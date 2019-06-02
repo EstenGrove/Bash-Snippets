@@ -9,4 +9,7 @@ free -m
 - Alternative for Mac:
 ```bash
 sysctl vm.swapusage 
+
+# show memory usage on mac
+vm_stat   options include: vm_stat -c 20
 ```
