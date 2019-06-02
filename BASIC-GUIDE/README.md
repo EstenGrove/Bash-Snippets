@@ -8,6 +8,32 @@ Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and mo
 ```bash
 alias HOME='cd /Users/myusername'
 ```
+###### Delete an Alias
+```bash
+unalias <name-of-alias>
+
+########## EXAMPLE #########
+
+# create alias
+alias HOME='cd /Users/myusername'
+
+# delete/remove alias
+unalias HOME
+```
+
+## Bash Comparison Operators using flags
+```bash
+| Bash Operator | Operator | Description              |
+| ------------- | -------- | ------------------------ |
+| -eq           | ==       | Equal                    |
+| -ne           | !=       | Not Equal                |
+| -gt           | >        | Greather Than            |
+| -ge           | >=       | Greater than or equal    |
+| -lt           | <        | Less than                |
+| -gt           | <=       | Less Than or equal       |
+| -z            | == null  | Is null                  |
+```
+
 
 ### Functions
 - The ```$1``` references the first argument passed to the function.
