@@ -25,6 +25,7 @@ find -follow
 ```bash
 find . -type f
 ```
+# Search By Name
 
 ### Search For Directories By Name
 - uses the ```-type d``` flag, denotes __type: directory__
@@ -85,7 +86,7 @@ find . -type d -empty -delete
 
 -----------------------
 
-## Search Based on Time, Date
+# Search Based on Time, Date
 __Options:__
 - Modified Time: last time the file/directory contens were modified
   - ```-mtime``` - time in days
@@ -127,7 +128,7 @@ find . -type f -ls | grep "Oct 10"
 [__TOP__](#find-command)
 
 -----------------------
-## Search All Files/Directories Based on Size
+# Search by Size
 Uses the ```-size``` flag.
 __Options:__
 - ```c```: bytes
@@ -156,7 +157,7 @@ find . -size +1G
 -----------------------
 
 
-## Search Based On Permissions
+## Search by Permissions
 Permissions' flags can set using octal(644, 755 etc) or Writables(rx, rw, rw-x etc)
 
 __Options (flags):__
@@ -211,7 +212,7 @@ find . -type f ! -name "*log*"
 
 -----------------------
 
-## Limiting Directory Traversal
+# Search a Certain Folder Depth, Limiting Traversal
 To limit *how* deep a command runs in your system tree you can use the ```maxdepth``` or ```mindepth``` option
 
 __Options:__
@@ -238,7 +239,7 @@ find . -type f mindepth 3 -name "*log*"
 
 ---------------------
 
-## Executing Other Commands Upon a ```find``` Search
+# Executing Other Commands Upon a ```find``` Search
 You can run different commands using the search results from a ```find``` command, typically ```-exec``` is needed for this.
 
 #### Find All .mp3 Files and Copy Them To Another Directory, Like external HD
@@ -255,7 +256,7 @@ find . -type f -name "*.mp3" -exec cp {} targetDirectory/ ";"
 ----------------------
 
 
-## Text Searching
+# Text Searching
 
 ### Search For Text Within Files
 ```bash
