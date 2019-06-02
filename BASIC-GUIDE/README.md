@@ -18,7 +18,7 @@ Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and mo
   - [Until loop](#until-loop)
 
 
-### Aliases
+## Aliases
 - Allows commands to be referenced with a keyword
 ```bash
 alias HOME='cd /Users/myusername'
@@ -36,6 +36,9 @@ alias HOME='cd /Users/myusername'
 unalias HOME
 ```
 
+-------------------
+
+
 ## Bash Comparison Operators using flags
 ```bash
 | Bash Operator | Operator | Description              |
@@ -49,8 +52,10 @@ unalias HOME
 | -z            | == null  | Is null                  |
 ```
 
+-------------------
 
-### Functions
+
+## Functions
 - The ```$1``` references the first argument passed to the function.
 - ```$2``` references the second argument passed to the function and so on...
 
@@ -67,7 +72,10 @@ greeting "Esten"
 Hello Esten
 ```
 
-### Variables
+-------------------
+
+
+## Variables
 
 ```bash
 # Declaration
@@ -80,7 +88,10 @@ greeting $name
 Hello Esten
 ```
 
-### Conditionals
+-------------------
+
+
+## Conditionals
 
 ##### Syntax
 ```bash
@@ -94,7 +105,10 @@ if [num < 10]; then
 fi
 ```
 
-### Loops: for, while, until
+-------------------
+
+
+## Loops: for, while, until
 
 #### For Loop
 - For every ```i``` in ```ls``` echo ```i```.
@@ -153,6 +167,9 @@ until [  $COUNTER -lt 10 ]; do
 done
 ```
 
+-------------------
+
+
 ## Using the "SELECT" Keyword to Make Menus
 - This will create a "select" menu by looping thru each option in ```OPTIONS```, which allows the user to select an option.
 ```
@@ -170,12 +187,19 @@ select opt in $OPTIONS; do
   done
 ```
 
+-------------------
+
+
 ## Reading User Input with ```READ```
 ```bash
 echo "Please, enter your firstname and lastname"
 read FN LN
 echo "Hi $FN $LN!"
 ```
+
+-------------------
+
+
 ## Handling Arithmetic
 ```bash
 echo $((1 + 1))
@@ -204,6 +228,9 @@ echo $[1 + 1]
 -ne (!=)
 ```
 
+-------------------
+
+
 ## Capture a Commands' Output
 - This script will print all tables in a database(assuming MySQL is installed)
 ```bash
@@ -213,6 +240,10 @@ do
   mysql -uroot -e"show tables from $b"
 done
 ```
+
+-------------------
+
+
 ## Using the ```BC``` Shell
 - The ```BC``` Shell allows for bash scripts, arithmetic and other commands to run right from the terminal without a separate file;
 ```bash
