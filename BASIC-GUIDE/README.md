@@ -1,1 +1,2 @@
-# A Basic Guide for Bash: aliases, .bash_profile/.bashrc, conditionals, loops, variables etc.
+# A Basic Guide for Bash
+- Including: : aliases, .bash_profile/.bashrc, conditionals, loops, variables and more.
