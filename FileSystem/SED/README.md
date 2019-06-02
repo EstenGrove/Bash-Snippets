@@ -29,10 +29,10 @@ sed 's/unix/linux/' test.txt
 
 
  ### Replacing all occurences of a pattern with another string
- - This will replace each instance of "NAME" inside all ```.txt``` files that start with "test-", with the string "Esten".
  - NOTE: On MacOSX ```SED``` working slightly differently and you need to define a label(ie ```'.old'``` as the "backup" file.
   - HOWEVER, a work-around for this issue is to use an empty ```''``` backup string.
  ```bash
- sed -i '.old' 's/NAME/Esten/g' "test-"*.txt
+ sed -i '' 's/NAME/Esten/g' test-*.txt
  ```
-
+- the above will find every instance of "NAME" in all .txt files starting with "test-" and replace it with "Esten" 
+- ```-i``` means modify *in-place*, the empty '' is needed for MAC, ```s``` is substitute, ```g``` is for every instance
