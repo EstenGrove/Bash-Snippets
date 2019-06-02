@@ -1,24 +1,12 @@
-# Custom Aliases, .bash_profile etc
+# Custom Bash Scripts
+
+## Quick-Links for Navigation
+- [Quick & Dirty Backup Script](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/backup-script.sh)
+- [Create a tarball](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-tarball.sh)
+- [Create a zip file](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-zip.sh)
+- [Generate Multiple File](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/file-generator.sh)
+- __Git__
+  - [Git Deploy: Add, Commit, Push](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/GIT/deploy.sh)
+  - [Git Diff: check for differences in subtree or commits](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/GIT/git-diff.sh)
 
 
-### Create Tarball Files
-##### Tarball of a Single File
-```bash
-tar -zcvf output.tar.gz /path/to/filename.txt
-```
-##### Create a Tarball of a Directory
-```bash
-tar -zcvf output.tar.gz /path/to/dir/
-```
-##### Compress Multiple Directories at Once Into a Tarball
-```bash
-tar -zcvf output.tar.gz dir1 dir2 dir3 
-```
-
-#### Quick and Dirty Backup Script
-- The following script will make a backup called "my-backup-<the current date>.tgz" of the /home/me/ directory.
-```bash
-#!/bin/bash          
-OF=/var/my-backup-$(date +%Y%m%d).tgz
-tar -cZf $OF /home/me/
-```
