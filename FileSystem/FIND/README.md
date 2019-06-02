@@ -124,12 +124,47 @@ find . -size +1G
 
 
 ## Search Based On Permissions
+Permissions' flags can set using octal(644, 755 etc) or Writables(rx, rw, rw-x etc)
 
+__Options (flags):__
+- ```-perm```
+  - User Permissions Flags:
+    - ```a``` equals "ALL users"
+    - ```u``` equals "user"
+    - ```o``` equals "owner"
+    - ```g``` equals "group"
+  - Alternate Permissions Flags:
+    - ``r``` equals "read```
+    - ```w``` equals "write"
+    - ```x``` equals "execute"
+    - Examples of Permissions' Outputs: 
+      - ```-rwx-rw-r--```
+        - the first ```-``` denotes a file type, ```d``` would be for directory
+        - ```rwx``` denotes that perms are set to read, write and execute for the __*owner*__ of the file
+        - ```rw``` denotes read, write and execute perms for the user group that owns the file
+        - ```r--``` denotes read, write and execute perms for all other users of the file, as well
+        
+### Find All Files with ```rwxr-xr-x``` Permissions
+```bash
+find . -perm u=rwx,g=rx,o=rx
 
-### Find Files/Directories By Permissions (octal permissions)
+# the equivalent to the above is: rwxr-xr-x
+```
+
+### Find All Files/Diretories That Enable ```r-xr-xr-x``` Permissions for __ALL__ Users
+```bash
+find . -perm a=rx
+```
+
+### Find Files/Directories By Permissions (octal perms)
 - uses the ```-perm``` flag, denotes __permissions in octal form__
 ```bash
+# enables read, write, execute perms for all users, groups
 find . -perm 644
+
+# find permissions 755
+find . -perm 755
+
 ```
 ### Find All Files/Directories That DO NOT Include a Search
 ```bash
