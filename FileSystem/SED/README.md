@@ -3,7 +3,7 @@
 
 ## __Option Flags__
 - ```s``` is *subsitution* ie ```'s/regex/'```
- - ```'s/regex/replacement/flags'
+ - ```'s/regex/replacement/flags'```
  - ```g``` will apply replacement to *ALL* occurences that match a pattern
 - ```-i``` is for modifying *in-place*, like replacement
 - ```--quiet``` is for "constraining" the console output to just what's needed
