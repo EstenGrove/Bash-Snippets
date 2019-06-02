@@ -34,3 +34,13 @@ nslookup -type=soa google.com      # get the SOA record    (holds info about the
 nslookup -type=any google.com      # get all dns records  
 
 ```
+
+## ```PING```
+```ping``` is used to send a "message" of packet to a host and track the response. This is useful when tracking response times and checking if a server is up, or if DNS is having an issues etc.
+```bash
+ping <host/IP>
+
+# examples
+ping google.com
+ping 74.221.83.182
+```
