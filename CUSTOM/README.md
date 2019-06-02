@@ -1,6 +1,8 @@
 # Custom Bash Scripts
 
 ## Quick-Links for Navigation
+- [Aliases](https://github.com/EstenGrove/Bash-Snippets/tree/master/CUSTOM/ALIASES)
+- [My Bash Profile](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/BASH-PROFILE/.bash_profile)
 - [Quick & Dirty Backup Script](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/backup-script.sh)
 - [Create a tarball](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-tarball.sh)
 - [Create a zip file](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-zip.sh)
