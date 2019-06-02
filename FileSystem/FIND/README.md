@@ -4,10 +4,10 @@
 ## ```find``` Quick-Links
 - [Search by Name](#search-for-directories-by-name)
 - [Search by Time or Date](#search-based-on-time-date)
-- [Search by Size](#search-all-filesdirectories-based-on-size)
-- [Search by Permissions](#search-based-on-permissions)
+- [Search by Size](#search-by-size)
+- [Search by Permissions](#search-by-permissions)
 - [Find empty files or folders](#find-all-empty-filesdirectories)
-- [Search a Certain Folder Depth](#limiting-directory-traversal)
+- [Search a Certain Folder Depth](#search-a-certain-folder-depth-limiting-traversal)
 - [Execute other Commands From Find](#executing-other-commands-upon-a-find-search)
 - [Text Searching](#text-searching)
 
