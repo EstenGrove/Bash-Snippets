@@ -1,7 +1,7 @@
 # A "Quick Start" Guide for Bash
 Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and more.
 
-###### __NOTE: Every script file must contain ```#!/bin/bash``` before any scripts are written. Otherwise you may place scripts in your .bash_profile or .bashrc file.__
+#### __NOTE: Every script file must contain ```#!/bin/bash``` before any scripts are written. Otherwise you may place scripts in your .bash_profile or .bashrc file.__
 
 # Quick-Links For this Guide
 - [Aliases](https://github.com/EstenGrove/Bash-Snippets/blob/master/BASIC-GUIDE/README.md#aliases)
