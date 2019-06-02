@@ -16,6 +16,11 @@ Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and mo
   - [C-type for loop](#c-type-for-loop)
   - [While loop](#while-loop)
   - [Until loop](#until-loop)
+- [Using "SELECT" to Create Menus](#using-the-select-keyword-to-make-menus)
+- [Read User Input w/ ```read```](#reading-user-input-with-read)
+- [Handling Arithmetic](#handling-arithmetic)
+- [Using the ```bc``` Shell](#using-the-bc-shell)
+  - the ```bc``` shell allows for in-shell scripts, arithmetic and more WITHOUT a separate file
 
 
 ## Aliases
