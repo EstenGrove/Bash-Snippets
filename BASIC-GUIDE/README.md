@@ -63,6 +63,26 @@ for i in $( ls ); do
   echo item: $i
 done
 ```
+###### For...in Loop 
+```bash
+# multi-line version
+for f in log-*txt; do
+  less $f;
+done
+
+# one-liner version
+for f in log-*.txt; do less $f; done
+```
+
+###### For...in Loop w/ Variable
+- a useful method in for loops is to store the list you want to loop thru in a variable first
+```bash
+FILES=log-*.txt
+for f in $FILES; do
+  echo $f
+done
+```
+
 ###### C-Type For Loop
 - Same as the above for loop but different syntax.
 ```bash
