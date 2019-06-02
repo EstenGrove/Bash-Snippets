@@ -97,9 +97,13 @@ Hello Esten
 
 
 ## Conditionals
+Conditionals typically use reverse "terminators", ie the word that closes/terminates the conditional is the first word in the conditional backwards. 
+  - If..statements: starts with ```if``` ends with ```fi```
+  - Case...statements: starts with ```case``` ends with ```esac```
 
 ##### Syntax
 ```bash
+# Syntax
 if [expression]; then
   # do something...
 fi
@@ -109,6 +113,15 @@ if [num < 10]; then
   echo "$num is less than 10"
 fi
 ```
+#### Switch Case Conditionals
+```bash
+# syntax
+case "$1" in
+  a) echo "a matched";;
+  b) echo "b matched";;
+  c) echo "c matched";;
+esac
+
 
 -------------------
 
