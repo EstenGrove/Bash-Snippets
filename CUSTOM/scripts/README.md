@@ -1,2 +1,4 @@
-# Set of custom bash scripts for file generation, git functions etc
+# Custom Bash Scripts
+Collection of bash scripts covering file generation, git, backups and more.
+
 
