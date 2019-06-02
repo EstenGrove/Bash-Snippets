@@ -85,6 +85,39 @@ Max = 20
 awk 'BEGIN {num = 22; if(num >= 20 && num <= 30) printf "$num is greater than 20 AND less than 30", num}'
 ```
 
+### If...else...if
+```bash
+awk 'BEGIN {
+  a = 10;
+  
+  if (a == 20)
+  print "a == 20";
+  else if (a == 15)
+  print "a == 15";
+  else if (a == 10)
+  print "a == 10";
+}'
+```
+
+### While...loop
+- syntax: ```while (condition) action```
+
+```bash
+awk 'BEGIN { i = 1; while (i <= 10) { print i; i++ } }'
+
+#output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
 ------------------------
 
 
@@ -96,6 +129,29 @@ awk 'BEGIN {str1 = "Hello"; str2 = "World"; str3 = str1 " " str2; print str3}'
 # output
 Hello World
 ```
+
+
+------------------------
+
+
+## For...loops
+- same syntax as JavaScript for loops, basically
+```bash
+awk 'BEGIN { for(i = 1; i <= 10; i++) print i }'```
+
+# output
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
 
 
 ------------------------
