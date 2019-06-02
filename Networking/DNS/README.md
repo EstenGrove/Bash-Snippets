@@ -44,3 +44,14 @@ ping <host/IP>
 ping google.com
 ping 74.221.83.182
 ```
+
+# Local Machine: Networking Commands
+
+### Change Wifi Settings/Status on Your Machine
+```bash
+# turn of your wifi on your computer
+sudo ifconfig en0 down
+
+# restart wifi on your computer
+sudo ifconfig en0 up
+```
