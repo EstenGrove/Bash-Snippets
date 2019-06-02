@@ -1,27 +1,53 @@
 # Processes and Other Scripts
 
 
-### Memory Hogs 
-- Processes that are using lots of memory
+## Checking Processes
 ```bash
-alias memHogsTop='top -l 1 -o rsize | head -20'
-alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
-```
-### CPU Hogs
-- Processes that are using lots of CPU.
+# list all
+ps -ax
 
-```bash
-alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
+# find a processes by a search query like: application name or PID
+ps -ax | grep <search-param>
+
+# show all processes w/ their system hierarchy
+ps aux --forest
+
+# show processes for a user
+ps -u <username>
+
+# count concurrent processes by name
+ps aux | grep <proc-name/service> | wc -l 
+            # OR
+ps -A | grep <proc-name/service> | wc -l           
+
+# print memory usage
+cat /proc/meminfo
 ```
 
-### Continous "top" Command
-- Will run the following ```top``` every ten seconds to check the CPU hogs.
+## Checking Processes w/ ```top```
 ```bash
-alias topForever='top -l 9999999 -s 10 -o cpu'
+# check all current processes using top
+top -c  
+           # OR for unix
+top -a          
+
+# check all processes for a user - if no user is defined will check current user's processes
+top -u
+
+# filter results by cpu, mem, time and any available param filter using $
+top $cpu
+top $mem
+top $time
 ```
 
-##### Recommended/Alternative ```top``` Method
-- This method is the less expensive(ie resource intensive) method.
+## Kill a Process
 ```bash
- alias ttop="top -R -F -s 10 -o rsize"
- ```
+# kill process by ID
+kill <process-ID>
+
+# kill all processes
+killall
+
+# kill all processes by name: like all chrome processes
+killall chrome
+```
