@@ -39,7 +39,18 @@ top $cpu
 top $mem
 top $time
 ```
+- Alternatives for Mac
+```bash
+# check your computer's load average
+sysctl vm.loadavg 
 
+# show the number of cores in your computer
+sysctl -n hw.ncpu 
+
+# show memory usage with a count of 20 lines
+vm_stat   options include: vm_stat -c 20
+
+```
 ## Kill a Process
 ```bash
 # kill process by ID
