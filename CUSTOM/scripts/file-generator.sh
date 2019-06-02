@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# This will create 10 blank ".txt" files with the format of: test-1.txt, test-2.txt, test-3.txt etc...
+######## GENERATE 10 BLANK .txt FILES
 for i in $(seq 10)
 do
   touch "test-$i".txt
 done
+
+# output files: test-1.txt, test-2.txt, test-3.txt...
 
 ######## ONE-LINER VERSION
 for i in $(seq 10); do touch "test-$i".txt; done
