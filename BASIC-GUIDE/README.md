@@ -3,6 +3,21 @@ Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and mo
 
 ###### __NOTE: Every script file must contain ```#!/bin/bash``` before any scripts are written. Otherwise you may place scripts in your .bash_profile or .bashrc file.__
 
+# Quick-Links For this Guide
+- [Aliases](https://github.com/EstenGrove/Bash-Snippets/blob/master/BASIC-GUIDE/README.md#aliases)
+- [Comparison Operators in Bash](#bash-comparison-operators-using-flags)
+- [Functions](#functions)
+- [Variables](#variables)
+- [Conditionals](#conditionals)
+- [Loops](#loops-for-while-until)
+  - [for loop](#for-loop)
+  - [for...in loop](#forin-loop)
+    - [for...in loop w/ a variable](#forin-loop-w-variable)
+  - [C-type for loop](#c-type-for-loop)
+  - [While loop](#while-loop)
+  - [Until loop](#until-loop)
+
+
 ### Aliases
 - Allows commands to be referenced with a keyword
 ```bash
