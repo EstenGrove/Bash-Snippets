@@ -157,7 +157,7 @@ find . -size +1G
 -----------------------
 
 
-## Search by Permissions
+# Search by Permissions
 Permissions' flags can set using octal(644, 755 etc) or Writables(rx, rw, rw-x etc)
 
 __Options (flags):__
