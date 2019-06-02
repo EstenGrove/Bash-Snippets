@@ -1,5 +1,12 @@
 # ```FIND``` Command
 
+## ```find```` Quick-Links
+- [Search For Directories By Name](#Search For Directories By Name)
+- []()
+- []()
+- []()
+
+
 ## Syntax
 ```bash
 # syntax
