@@ -1,11 +1,15 @@
 # ```FIND``` Command
 
-## ```find``` Quick-Links
-- [Search For Directories By Name](#Search For Directories By Name)
-- []()
-- []()
-- []()
 
+## ```find``` Quick-Links
+- [Search by Name](#search-for-directories-by-name)
+- [Search by Time or Date](#search-based-on-time-date)
+- [Search by Size](#search-all-filesdirectories-based-on-size)
+- [Search by Permissions](#search-based-on-permissions)
+- [Find empty files or folders](#find-all-empty-filesdirectories)
+- [Search a Certain Folder Depth](#limiting-directory-traversal)
+- [Execute other Commands From Find](#executing-other-commands-upon-a-find-search)
+- [Text Searching](#text-searching)
 
 ## Syntax
 ```bash
@@ -49,6 +53,9 @@ find . -name "*.txt"
 ```
 - the above searches for all .txt files in the current directory
 
+[__TOP__](#find-command)
+
+
 ### Find All Empty Files/Directories
 - uses the ```-empty``` flag, denotes __blank file__
 ```bash
@@ -73,6 +80,8 @@ find . -type f -empty -delete
 # find ONLY folders that are empty, and delete them
 find . -type d -empty -delete
 ```
+
+[__TOP__](#find-command)
 
 -----------------------
 
@@ -115,6 +124,8 @@ find . -type f -mtime -2 -atime 30
 find . -type f -ls | grep "Oct 10" 
 ```
 
+[__TOP__](#find-command)
+
 -----------------------
 ## Search All Files/Directories Based on Size
 Uses the ```-size``` flag.
@@ -138,6 +149,8 @@ find . -size -20M
 ```bash
 find . -size +1G
 ```
+
+[__TOP__](#find-command)
 
 
 -----------------------
@@ -192,6 +205,10 @@ find . -type f ! -name "*log*"
 ```
 - the above will find all files, in the current directory, that DO NOT include the word "log" anywhere in the filename.
 
+
+[__TOP__](#find-command)
+
+
 -----------------------
 
 ## Limiting Directory Traversal
@@ -216,6 +233,8 @@ find . -type f maxdepth 3 -name "*log*"
 find . -type f mindepth 3 -name "*log*"
 ```
 
+[__TOP__](#find-command)
+
 
 ---------------------
 
@@ -230,6 +249,9 @@ find . -type f -name "*.mp3" -exec cp {} targetDirectory/ ";"
 - the above command is finding all .mp3 files and copying them from the current search(ie current directory) to the ```targetDirectory``` folder
 
 
+[__TOP__](#find-command)
+
+
 ----------------------
 
 
@@ -242,6 +264,6 @@ find . -type f -name "*.txt" -exec grep "Geek" {} \;
 - the above searches for all .txt files that contain the word "Geek" in them
 
 
-
+[__TOP__](#find-command)
 
 
