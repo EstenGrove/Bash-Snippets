@@ -1,6 +1,10 @@
 # ```GREP```
 Set of useful grep commands.
 
+## Syntax
+```bash
+grep -flags --options "search" <file-to-search-in>
+```
 
 __Options Flags:__
 - ```-i```
