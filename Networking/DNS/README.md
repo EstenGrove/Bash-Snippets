@@ -18,10 +18,19 @@ dig google.com txt   # get the TXT record  (typically used for SPF/DKIM/DMARC re
 dig google.com soa   # get the SOA record  (holds info about the zone records, like parent domain etc)
 ```
 - Using ```nslookup```
+```bash
 nslookup <domain>
            # OR
-nslookup <dns-record> <domain>
+nslookup -type=<dns-record> <domain>
 
 # examples
-nslookup google.com      # get the A record      (host)
-nslookup -query
+nslookup google.com                # get the A record      (host)
+nslookup -type=mx google.com       # get the MX record     (email)
+nslookup -type=cname google.com    # get the CNAME         (alias for host)
+nslookup -type=ns google.com       # get the nameservers   (authoritative nameservers - control the zone files)
+nslookup -type=txt google.com      # get the TXT record    (typically used for SPF/DKIM/DMARC records for email)
+nslookup -type=soa google.com      # get the SOA record    (holds info about the zone records, like the parent domain etc)
+
+nslookup -type=any google.com      # get all dns records  
+
+```
