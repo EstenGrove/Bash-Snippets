@@ -54,6 +54,19 @@ find . -type f -empty
 # find ONLY empty directories
 find . -type d -empty
 ```
+
+### Find All Empty Files/Directories and Delete Them
+```bash
+# find BOTH files and folders that are empty, and delete them
+find . -empty -delete
+
+# find ONLY files that are empty, and delete them 
+find . -type f -empty -delete
+
+# find ONLY folders that are empty, and delete them
+find . -type d -empty -delete
+```
+
 -----------------------
 
 ## Search Based on Time, Date
@@ -173,6 +186,44 @@ find . -type f ! -name "*log*"
 - the above will find all files, in the current directory, that DO NOT include the word "log" anywhere in the filename.
 
 -----------------------
+
+## Limiting Directory Traversal
+To limit *how* deep a command runs in your system tree you can use the ```maxdepth``` or ```mindepth``` option
+
+__Options:__
+- ```maxdepth```
+  - "maxdepth" will search a *maximum* of x levels deep
+  - ```find . maxdepth 3``` will search a *max* of 3 levels deep in the system tree
+- ```mindepth``` 
+  - "mindepth" will search a *minimum* of x levels deep
+  - ```find . mindepth 3``` will search *at least* 3 levels deep and WILL go deeper if possible
+
+
+### Search 3 Levels Deep for All Files That Contain "log"
+```bash
+find . -type f maxdepth 3 -name "*log*"
+```
+
+### Search *At least* 3 Levels Deep and Search Deeper, if Possible
+```bash
+find . -type f mindepth 3 -name "*log*"
+```
+
+
+---------------------
+
+## Executing Other Commands Upon a ```find``` Search
+You can run different commands using the search results from a ```find``` command, typically ```-exec``` is needed for this.
+
+#### Find All .mp3 Files and Copy Them To Another Directory, Like external HD
+```bash
+# using the -exec command w/ find: the curly braces are the placeholder for the directory that's being searched
+find . -type f -name "*.mp3" -exec cp {} targetDirectory/ ";"
+```
+- the above command is finding all .mp3 files and copying them from the current search(ie current directory) to the ```targetDirectory``` folder
+
+
+----------------------
 
 
 ## Text Searching
