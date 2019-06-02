@@ -198,8 +198,17 @@ find . -perm 644
 
 # find permissions 755
 find . -perm 755
-
 ```
+
+### Find All Directories w/ x Permissions and Change The Permissions to 755
+```bash
+# find all folders and change to 755 perms
+find . -type d -exec chmod 755 {} \;
+
+# find all files named "logs-" and change perms to 644
+find . -type f -name "logs-*" -exec chmod 644 {} \;
+```
+
 ### Find All Files/Directories That DO NOT Include a Search
 ```bash
 find . -type f ! -name "*log*"
@@ -264,7 +273,19 @@ find . -type f -name "*.txt" -exec grep "Geek" {} \;
 ```
 - the above searches for all .txt files that contain the word "Geek" in them
 
+# Find & Replace
+Combining ```find``` with other commands to replace or change text, makes for a powerful combination.
+
+### Find and Replace Using ```find``` and ```sed``` 
+```bash
+find . -type f -exec sed -i 's/Cool/NotCool/g' {} \;
+```
+
+### Find Replace Using ```find``` and ```grep```
+```bash
+find. -type f -name "log-*.txt" -exec grep "output:" {} \;
+```
+- the above will find all .txt files starting with "log-" and search for the text "output:" 
+
 
 [__TOP__](#find-command)
-
-
