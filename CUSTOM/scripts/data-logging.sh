@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ########################## DATA LOGGING SCRIPT ##########################
 # Script is used for creating a count of a specific "string" appearance using regex, then writing to a file
 # - "val" is the awk command as a variable. 
