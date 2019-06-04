@@ -13,6 +13,16 @@ acp (){
 acp "Comment goes here..."
 ```
 
+### Git Fetch and Pull Script
+```bash
+gfp () {
+  git fetch; git pull
+}
+```
+- To Run the command: ```gfp```
+
+
+
 ### Git Diffing
 - check for differences between two different commit trees and install the needed dependencies IF changes are found.
 ```bash    
