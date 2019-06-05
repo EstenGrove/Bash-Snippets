@@ -7,6 +7,7 @@ grep -flags --options "search" <file-to-search-in>
 ```
 
 __Options Flags:__
+- ```--color=auto``` colorized output
 - ```-i```
   - case-insensitive
     - ```grep -i "miller" file.txt
