@@ -5,6 +5,7 @@
 - ```-c``` cut by character
   - __Syntax:__ ```cut -c [(k)-(n)/(k),(n)/(n)] filename``` 
     - ```(k)``` is the starting position of a character and ```(n)``` is the ending position of a character.
+      - __Example:__ ```cut -c 2,5,7 file.txt``` will print the 2, 5 and 7th character from *__each__* line in ```file.txt```
     
     
     
