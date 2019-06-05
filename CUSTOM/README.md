@@ -8,6 +8,8 @@
   - [Create a tarball](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-tarball.sh)
   - [Create a zip file](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/create-zip.sh)
   - [Generate Multiple File](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/file-generator.sh)
+  - [Data Logging Script](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/data-logging.sh)
+    - Useful for logging out errors and getting an error count, or the number of occurences.
 - __Git__
   - [Git Deploy: Add, Commit, Push](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/GIT/deploy.sh)
   - [Git Diff: check for differences in subtree or commits](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/GIT/git-diff.sh)
