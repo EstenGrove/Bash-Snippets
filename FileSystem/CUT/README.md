@@ -8,6 +8,7 @@
       - __Example:__ ```cut -c 2,5,7 file.txt``` will print the 2, 5 and 7th character from *__each__* line in ```file.txt```
 - ```-d``` is for using a delimiter
 - ```-f``` display specific fields: ```cut file.txt -f 1,3``` will display 1st and 3rd fields 
+- ```-b``` cut by *bytes*
 
 ------------------------------
 
