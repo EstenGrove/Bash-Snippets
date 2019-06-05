@@ -11,6 +11,7 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 - [SORT](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/SORT)
 - [WORD-COUNT(wc)](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/WORD-COUNT(wc))
 - [DISK USAGE](https://github.com/EstenGrove/Bash-Snippets/tree/master/DISK-USAGE)
+- [UNIQ](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/UNIQ)
 - [PERMISSIONS](https://github.com/EstenGrove/Bash-Snippets/tree/master/Permissions)
 - [COMPUTING PERFORMANCE](https://github.com/EstenGrove/Bash-Snippets/tree/master/Computing-Performance)
   - [PROCESSES](https://github.com/EstenGrove/Bash-Snippets/tree/master/Computing-Performance/Processes)
