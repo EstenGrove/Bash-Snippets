@@ -25,3 +25,10 @@ du -a <directory|blank> | sort -r -n | head -n 20
 # or a more human readable form
 du -h <directory|blank> | sort -r -n | head -n 20
 ```
+
+## Get the Disk Usage for a Certain "Depth" of Directories
+- Only go so deep thru the directory tree.
+- This will go 5 levels deep and sort the results by largest file/directory to smalles
+```bash
+du -h --max-depth=5 | sort -rn
+```
