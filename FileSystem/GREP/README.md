@@ -142,3 +142,19 @@ grep "^start" log.txt
 ```bash
 grep "[^0-9]" log.txt
 ```
+
+
+---------------------------
+
+
+## Pattern Matching w/ Sorting
+
+
+#### __Sort By Date__
+- the following will print the first column of every occurence of "Oct 18 2018" and sort by most recent at the top
+```bash
+grep "18/Oct/2018" |  awk '{print $1}' logfile.txt | sort | uniq -c | sort -rn | head
+```
+
+
+
