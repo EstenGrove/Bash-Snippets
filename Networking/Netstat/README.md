@@ -24,3 +24,20 @@ netstat -nt | grep :443 | wc -l
 ## Count the Number of Active IP Connections (useful server-side)
 ```bash
 netstat -ntu | print '{print$5}' | cut -d: f1 | sort | uniq -c | sort -rn
+```
+
+
+## Advanced ```NETSTAT```
+
+
+#### __Count the Number of Connections Per IP__
+- this will count the number of connections per IP and sort them from greatest to fewest connections
+```bash
+netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n
+
+# a more readable options of sorting active IP connections count
+netstat -ntu | grep ESTAB | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr
+
+# count IP connections thru TCP/IP
+netstat -anp |grep 'tcp\|udp' | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n
+```
