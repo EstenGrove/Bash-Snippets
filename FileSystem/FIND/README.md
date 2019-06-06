@@ -41,6 +41,12 @@ find . -type f -name "*log*"
 ```
 - the above searches for all files the include "log" in the name
 
+#### __Find All Files by Name & Delete Them (alternate method)__
+- this will deletel all .txt files in the Current directory
+```bash
+find . -name “*.txt” -type f -delete
+```
+
 ### Search By Name Regardless of Case
 - uses the ```-iname``` flag, denotes __case-insensitive__
 ```bash
@@ -56,6 +62,12 @@ find . -name "*.txt"
 
 [__TOP__](#find-command)
 
+
+### Find All Files By Type & Delete Them (extension)
+- this uses the ```exec``` command to delete all .txt files
+```bash
+find . -type f -name “*.txt” -exec rm -f {} /;
+```
 
 ### Find All Empty Files/Directories
 - uses the ```-empty``` flag, denotes __blank file__
@@ -101,28 +113,45 @@ __Options:__
   - ```-ctime``` - time in days
   - ```-cmin``` - time in minutes
 
-### Find Files *Modified* in the Last 0-2 Days
+#### __Find Files *Modified* in the Last 0-2 Days__
 ```bash 
 find . -type f -mtime -2
 ```
 
-### Find All Files *Modified* Longer Than 2 Days Ago
+#### __Find All Files *Modified* Longer Than 2 Days Ago__
 ```bash
 find . -type f -mtime +2
 ```
 
-### Find All Files *Modified At Least* 2 Days Ago
+#### __Find All Files *Modified At Least* 2 Days Ago__
 ```bash
 find . -type f -mtime 2
 ```
 
-### Find All Files *Modified* In the Last 2 Days, AND Accessed in the Last 30 Minutes
+#### __Find All Files *Modified* In the Last 2 Days, AND Accessed in the Last 30 Minutes__
 ```bash
 find . -type f -mtime -2 -atime 30
 
 ### Find Files By __"Last Modified Date"__
 ```bash
 find . -type f -ls | grep "Oct 10" 
+```
+
+#### __Find Files in the Current Directory That Were Modified in the Last Hour__
+```bash
+find . -mmin -60
+```
+
+#### __Find All Files Modified on a Specific Date__
+- find all files modified on 10-12-2018
+```bash
+find . -type f -newermt 2018-10-12
+```
+
+#### __Find All Files In the Current Directory with the Last "Accessed-On" Date__
+- files accessed on Oct 10
+```bash
+find . -type f -ls | grep “Oct 10”
 ```
 
 [__TOP__](#find-command)
@@ -136,19 +165,25 @@ __Options:__
 - ```m```: megabytes
 - ```g```: gigibytes
 
-### Find All Files That Are 20Megabytes
+#### __Find All Files That Are 20Megabytes__
 ```bash
 find . -size 20M
 ```
 
-### Find All Files That Are *Less Than* 20Megabytes
+#### __Find All Files That Are *Less Than* 20Megabytes__
 ```bash 
 find . -size -20M
 ```
 
-### Find All Files That Are *Larger Than* 1Gigabyte
+#### __Find All Files That Are *Larger Than* 1Gigabyte__
 ```bash
 find . -size +1G
+```
+
+#### __Find All Files In a Size Range (between x and x)__
+- find all files between 50M and 100M in the current directory
+```bash
+find . -size +50M -size -100M
 ```
 
 [__TOP__](#find-command)
