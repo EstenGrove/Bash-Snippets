@@ -79,6 +79,11 @@ grep "some$" log.txt
 grep "^[A-Z]" log.txt
 ```
 
+
+-------------------------------
+
+
+
 # Pattern Repeating
 
 #### __Match Any Lowercase Letter Multiple Time__
@@ -112,5 +117,28 @@ grep -E "(ERROR|err)" log.txt
 - the following will match the word "New" and any matches of "a", "b", or "c" that immediately follow it. 
 - Example: ```Newa  OR  Newb  OR  Newc```
 ```bash
-grep  “New[abc]”  filename
+grep  “New[abc]”  log.txt
+```
+
+#### __Match a *Range* Of Characters__
+- the following will match "New" when immediately followed by any letter between "a" and "e"
+```bash
+grep  “New[a-e]” log.txt
+```
+
+#### __Match Any Number__
+```bash
+grep "[0-9]" log.txt
+```
+- the above will match any letter 0-9
+
+#### __Match a Pattern that *MUST OCCUR* at The Beginning of Each Line__
+- the following will match every line that begins with "start"
+```bash
+grep "^start" log.txt
+```
+### __Match Any Character that *IS NOT* Included in the Pattern__
+- this will look for anything that IS NOT a number 0-9
+```bash
+grep "[^0-9]" log.txt
 ```
