@@ -12,6 +12,7 @@ __Options Flags:__
   - case-insensitive
     - ```grep -i "miller" file.txt
       - will search for "miller" regardless of case.
+- ```-E``` is for *extended regex*
 - ```-R```
   - search recursively
     - ```grep -R "miller" dir1/```
@@ -78,10 +79,38 @@ grep "some$" log.txt
 grep "^[A-Z]" log.txt
 ```
 
-## Pattern Repeating
-- this will match every occurence of the pattern
+# Pattern Repeating
+
+#### __Match Any Lowercase Letter Multiple Time__
+- this will match every occurence of the pattern "letters including a-z" multiple times, so matches any lowercase letter
 ```bash
 grep "([a-z]*)" log.txt
 ```
 
+#### __Match a Specific Group of Characters (ie regex grouping)__
+- below will match all instances of "ERROR:" using regex
+```bash
+# Method 1
+grep "\(ERROR:\)" log.txt
 
+# Method 2
+grep -E "ERROR:" log.txt
+
+# Method 3
+egrep "(ERROR:)" log.txt
+```
+- the above are ALL functionally equivalent
+
+
+#### __Alternating Matches__
+- the following will find either "ERROR" or "err" in log.txt
+```bash
+grep -E "(ERROR|err)" log.txt
+```
+
+#### __Match Any *One* of a Set of Matches__
+- the following will match the word "New" and any matches of "a", "b", or "c" that immediately follow it. 
+- Example: ```Newa  OR  Newb  OR  Newc```
+```bash
+grep  “New[abc]”  filename
+```
