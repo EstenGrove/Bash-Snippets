@@ -40,3 +40,23 @@ alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden 
 alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
 alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
 alias make10mb='mkfile 10m ./10MB.dat'      # make10mb:     Creates a file of 10mb size (all zeros)
+
+### ALTERNATE METHODS FOR FILE GENERATION ON WINDOWS ###
+
+# Create 5megabyte file
+truncate -s 5M FiveMegs.txt
+
+# create 10megabtye file
+truncate -s 10M TenMegs.txt
+
+#################### GENERATE SEVERAL FILES OF A SPECIFIC SIZE ####################
+
+# generate 10 files that are all 5M
+for i in $(seq 10); do truncate -s 5M "FiveMegs-$i.txt"; done
+
+
+# generate 10 files that are all 10M
+for i in $(seq 10); do truncate -s 10M "TenMegs-$i.txt"; done
+
+# generate 5 files that are all 1G
+for i in $(seq 5); do truncate -s 1G "OneGig-$i.txt"; done
