@@ -32,3 +32,43 @@ du -h <directory|blank> | sort -r -n | head -n 20
 ```bash
 du -h --max-depth=5 | sort -rn
 ```
+
+## Get Total Disk Usage for a Given Directory's Contents
+```bash
+du -h -d 2 -c
+```
+
+# Sorting Disk Usage Output
+
+#### __Sort By Largest Amount of Disk Usage__
+```bash
+du -h -a / | sort -h | tail -n 15
+```
+#### __ONLY Show Contents *Larger* Than a Certain Size
+- this will show only contents larger than 100M
+```bash
+du -h -t 100M -a /
+```
+
+#### __List *Only* Inodes' Usage
+```bash
+du -d 2 --inodes
+```
+
+## Show Last Modified Time
+```bash
+du -h -d 1 --time -a
+```
+
+# Using the ```DF``` Command
+
+## Using ```df -h``` To Show File System Usage
+```bash
+df -h
+
+# output
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  1.9T  187G  1.7T  11% /
+T:                   1000G   27G  974G   3% /t
+U:                   1000G   27G  974G   3% /u
+```
