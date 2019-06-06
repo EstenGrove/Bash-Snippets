@@ -36,3 +36,16 @@ sed 's/unix/linux/' test.txt
  ```
 - the above will find every instance of "NAME" in all .txt files starting with "test-" and replace it with "Esten" 
 - ```-i``` means modify *in-place*, the empty '' is needed for MAC, ```s``` is substitute, ```g``` is for every instance
+
+
+## Print By Line Number
+- this will print the entire line 383
+```bash
+sed -n 383p file.txt
+```
+
+#### __Print Multiple Lines__
+- this will print line 3 and 6
+```bash
+sed -n ‘3,6p’ file.txt
+```
