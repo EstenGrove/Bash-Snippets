@@ -3,6 +3,8 @@ A collection of ```netstat``` commands
 
 ## Check For Listening Ports
 ```bash
+netstat -a
+
 netstat -tuplen
 
 # check all TCP ports
