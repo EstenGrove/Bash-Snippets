@@ -3,6 +3,7 @@ A collection of ```netstat``` commands
 
 ## Check For Listening Ports
 ```bash
+# most useful w/ clean and clear output of ports, active connections TCP/IP and UDP
 netstat -a
 
 netstat -tuplen
@@ -13,6 +14,7 @@ netstat -at
 # list stats for all ports
 netstat -s
 ```
+- for windows using ```cmd``` you can run ```ipconfig /all```
 
 ## Check For Connections to Specific Ports
 ```bash
