@@ -101,6 +101,7 @@ awk 'BEGIN {
 
 ### While...loop
 - syntax: ```while (condition) action```
+- while ```i``` is less than or equal to 10, ```print i``` and keep counting (```i++```)
 
 ```bash
 awk 'BEGIN { i = 1; while (i <= 10) { print i; i++ } }'
