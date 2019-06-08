@@ -24,5 +24,9 @@ echo "Hello its 8:40" | at 8:40
 
 # alternate times
 at midnight
+```
 
+#### Show Apps on Local Machine that Use a Internet Connection
+```bash
+lsof -P -i -n
 ```
