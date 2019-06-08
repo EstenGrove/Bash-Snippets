@@ -38,3 +38,4 @@ genpasswd 20
 
 openssl rand –base64 20
 ```
+- OR you can install ```pwgen``` just like for Mac: ```sudo apt-get pwgen```
