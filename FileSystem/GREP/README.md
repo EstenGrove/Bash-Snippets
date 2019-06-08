@@ -50,6 +50,12 @@ grep -inR --color "miller"
 -----------------
 
 
+## Search for String, Recursively in All Files
+```bash
+grep -ir string *
+```
+
+
 ## Grep for All Lines that *DO NOT* Contain a Pattern
 ```bash
 grep -v "2019-3-12" log.txt
