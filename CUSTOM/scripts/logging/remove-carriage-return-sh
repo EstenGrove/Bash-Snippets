@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# remove carriage return from .csv file
+
+sed -i 's/\r//g somefile.txt
