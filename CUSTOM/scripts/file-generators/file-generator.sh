@@ -16,6 +16,11 @@ for i in $(seq 10); do touch "test-$i".txt; done
 for i in $(seq 10); do rm -rf "test-$i".txt; done
 
 
+
+######### CREATE MULTIPLE SUBDIRECTORIES ##########
+mkdir -p /path/{folder1,folder2,folder3,folder4}
+
+
 # To create **AND** add content to a set of files
 for i in $(seq 10); do echo "File Number $i" > "test-$i".txt; done
 
