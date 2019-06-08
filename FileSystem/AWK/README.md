@@ -40,7 +40,7 @@ awk '{print $1 "\t" $3}' test.txt
 - syntax: ```awk '/regex/ {print $0}' <file>```
 
 
-## Pattern Matching Method 1
+### Pattern Matching
 - uses the more conventional/standard regex syntax ```/some-pattern/```
 ```bash
 awk '/error/ {print $0}' logs.txt
@@ -54,14 +54,14 @@ awk '$0 ~ 9' numbers.txt
 ```
 - the above will print the line that contains a "9"
 
-#### Pattern Negation (Not Match)
+### Pattern Negation (Not Match)
 - uses the ```!~``` characters to indicate NOT MATCH, ie pattern negation.
 ```bash
 awk '$0 !~ 9' numbers.txt
 ```
 - the above will look for patterns that DO NOT include "9"
 
-#### Print Lines By Character Length
+### Print Lines By Character Length
 ```bash
 awk 'length($0) > 20' logs.txt
 ```
