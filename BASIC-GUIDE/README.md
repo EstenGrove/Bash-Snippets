@@ -122,6 +122,60 @@ case "$1" in
   c) echo "c matched";;
 esac
 ````
+#### __Conditionals for the File System__
+- the following ```[[  ]]``` is an actual program that returns ```0```(true) and ```1```(false)
+```bash
+[[ -e <file> ]]      EXISTS
+[[ -r <file> ]]      READABLE
+[[ -h <file> ]]      SYMLINK
+[[ -d <file> ]]      DIRECTORY
+[[ -w <file> ]]      WRITEABLE
+[[ -s <file> ]]      SIZE is > 0 bytes
+[[ -f <file> ]]      FILE
+[[ -x <file> ]]      EXECUTABLE
+
+# FILE COMPARISONS
+
+[[ <file1> -nt <file2> ]]   FILE1 IS MORE RECENT THAN FILE2
+[[ <file1> -ot <file2> ]]   FILE2 IS MORE RECENT THAN FILE1
+[[ <file1> -ef <file2> ]]   FILE1 AND FILE2 ARE THE SAME
+
+
+# STRING COMPARISONS
+
+[[ -z STRING ]]          EMPTY STRING
+[[ -n STRING ]]          NOT EMPTY STRING
+[[ STRING == STRING ]]   EQUAL STRING
+[[ STRING != STRING ]]   NOT EQUAL STRING
+
+# NUMBER COMPARISONS
+
+[[ NUM -eq NUM ]]         EQUAL
+[[ NUM -ne NUM ]]         NOT EQUAL
+[[ NUM -lt NUM ]]         LESS THAN
+[[ NUM -gt NUM ]]         GREATER THAN
+[[ NUM -le NUM ]]         LESS THAN OR EQUAL TO
+[[ NUM -ge NUM ]]         GREATER THAN OR EQUAL TO
+
+# EXPRESSION COMPARISONS
+
+[[ ! EXPR ]]              NOT
+[[ X ]] && [[ Y ]]        AND
+[[ X ]] || [[ Y ]]        OR
+```
+
+###### __Examples of Conditionals__
+```bash
+# check if your internet is working
+if ping -c 1 google.com; then
+  echo "Your internet is working"
+done
+
+# check if a file exists
+if [[ -e "file.txt" ]]; then
+  echo "file exists"
+done
+
 
 -------------------
 
