@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# generate random password
+# generate random 32-character password
 openssl rand -base64 32
