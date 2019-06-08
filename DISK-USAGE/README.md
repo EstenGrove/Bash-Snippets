@@ -44,15 +44,19 @@ du -h -d 2 -c
 ```bash
 du -h -a / | sort -h | tail -n 15
 ```
-#### __ONLY Show Contents *Larger* Than a Certain Size
+#### __ONLY Show Contents *Larger* Than a Certain Size__
 - this will show only contents larger than 100M
 ```bash
 du -h -t 100M -a /
 ```
 
-#### __List *Only* Inodes' Usage
+#### __List *Only* Inodes' Usage__
 ```bash
 du -d 2 --inodes
+```
+##### Get Directories with the *Most* Inode Usage
+```bash
+find / -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n | tail
 ```
 
 ## Show Last Modified Time
