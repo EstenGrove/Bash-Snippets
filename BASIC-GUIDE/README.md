@@ -239,6 +239,89 @@ until [  $COUNTER -lt 10 ]; do
 done
 ```
 
+
+-------------------
+
+
+## Arrays
+
+
+#### Defining Arrays
+- don't use commas ```,```
+```bash
+# define entire array
+Fruits=('Apples' 'Bananas' 'Grapes')
+
+# define values at a specific index
+Fruits[0] = 'Apples'
+Fruits[1] = 'Bananas'
+Fruits[2] = 'Grapes'
+```
+
+#### Print an Item in an Array
+```bash
+echo ${Fruits[0]}   
+
+# Apples
+```
+###### Print all Items in an Array (space-separated)
+```bash
+echo ${Fruits[@]}
+
+# Apples Bananas Grapes
+```
+
+#### Get the Length of an Array (ie. the number of elements)
+```bash
+echo ${#Fruits[@]}
+
+# 3
+```
+###### Get the Length of a Specific Item in an Array (like a string)
+```bash
+echo ${#Fruits[1]}
+
+# 8
+```
+###### Get a Range of Elements
+- syntax: ```echo ${Array[@]:start:length}```
+```bash
+echo ${Fruits[@]:2:3}   # this will print 3 elements starting at index 2
+
+# Grapes
+```
+
+#### Loop Thru an Array Using a For Loop
+__Syntax__
+```bash
+for i in "${Array[@]}"; do
+  echo $i;
+done
+```
+
+```bash
+for i in "${Fruits[@]}"; do
+  echo $i;
+done
+
+# Apples
+# Bananas
+# Grapes
+```
+
+#### Modifying An Array
+- push, remove, duplicate, concatenate
+```bash
+Fruits=("${Fruits[@]}" "Watermelon")     # Push
+Fruits+=('Watermelon')                   # Push (method 2)
+Fruits=( ${Fruits[@]/Ap*/}               # Remove with regex matching
+unset Fruits[2]                          # Remove a single item (NO REGEX)
+Fruits=("${Fruits[@]}")                  # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}")  # Concatenate
+lines=(`cat "logfile"`)                  # Read from file
+
+```
+
 -------------------
 
 
