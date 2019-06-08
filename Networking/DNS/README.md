@@ -1,6 +1,30 @@
 # DNS Commands & Lookups
 - NOTE: some commands may require different packages, however their "non-dependent" alternative will be included along with the command.
 
+## ```WHOIS``` Filtered For *Only* the Important Information
+```bash
+whois commandlinefu.com | grep -E '^\s{3}'
+
+# Domain Name: COMMANDLINEFU.COM
+# Registry Domain ID: 1538321113_DOMAIN_COM-VRSN
+# Registrar WHOIS Server: whois.registrar.amazon.com
+# Registrar URL: http://registrar.amazon.com
+# Updated Date: 2018-05-09T13:10:05Z
+# Creation Date: 2009-01-20T13:39:29Z
+# Registry Expiry Date: 2020-01-20T13:39:29Z
+# Registrar: Amazon Registrar, Inc.
+# Registrar IANA ID: 468
+# Registrar Abuse Contact Email:
+# Registrar Abuse Contact Phone:
+# Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+# Name Server: NS-1317.AWSDNS-36.ORG
+# Name Server: NS-2043.AWSDNS-63.CO.UK
+# Name Server: NS-421.AWSDNS-52.COM
+# Name Server: NS-858.AWSDNS-43.NET
+# DNSSEC: unsigned
+# URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+```
+
 ## ```DIG```
 
 #### Perform a DNS Lookup 
