@@ -121,3 +121,20 @@ esxcli system process list
 65537          12          idle2             superDom          ...
 383542         66970       python            superDom           python /bin/esxcli system process list
 ```
+
+
+-------------
+
+
+# Miscellaneous Commands
+
+#### Check for External HD Connected
+```bash
+lsusb
+
+# output
+  Bus 001 Device 006: ID ... Seagate RSS LLC
+  Bus 001 Device 005: ID ... Dell Computer Corp.
+
+
+```
