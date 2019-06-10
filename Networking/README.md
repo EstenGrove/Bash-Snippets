@@ -9,13 +9,13 @@ __Options__
 - ```-l``` is for setting the packet size in bytes
 
 
-#### __```PING``` for Packet Loss
+#### __```PING``` for Packet Loss__
 - test for packet loss, network degradation
 ```bash
 ping -s 1 <host_name>
 ```
 
-#### __Continual ```PING``` Test
+#### __Continual ```PING``` Test__
 - this will continue pinging a host until you kill it
 ```bash
 ping -t <host_name>
@@ -27,7 +27,7 @@ The following command will send 1500 bytes in *each* packet
 ping -l 1500 <host_name>
 ```
 
-#### __Send Request w/ 1500 Bytes/request With a "Keep-Alive" Message
+#### __Send Request w/ 1500 Bytes/request With a "Keep-Alive" Message__
 The following will ping the host using 1500 bytes per packet and will keep pinging until you kill the request
 ```bash
 ping -t -l 1500 <host_name>
