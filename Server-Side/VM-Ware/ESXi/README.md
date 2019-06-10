@@ -11,8 +11,12 @@ reboot -f
 shutdown
 ```
 
+-------------------
 
-## Get VM System Info
+
+# System Related Commands
+
+### Get VM System Info
 ```bash
 esxcli system version get
 
@@ -24,6 +28,26 @@ esxcli system version get
   Patch: 61
 ```
 
+#### Get Memory(RAM) Info
+```bash
+esxcli hardware memory get
+
+# output
+Physical Memory: .... bytes
+Reliable Memory: 0 bytes
+NUMA Node Count: 1
+```
+
+#### Get CPU Info
+```bash
+esxcli hardware cpu list
+```
+
+#### List ALL CPUs on the Machine
+```bash
+esxcli hardware cpu list
+```
+
 ## Get the Install Date
 ```bash
 esxcli system stats installtime get
@@ -32,7 +56,7 @@ esxcli system stats installtime get
 2019-04-1521:48:02
 ```
 
-### Get Hostname 
+#### Get Hostname 
 ```bash
 esxcli system hostname get
 
@@ -42,7 +66,12 @@ esxcli system hostname get
   Host Name: localhost
 ```
 
-## Get the Local Users
+
+-----------------
+
+# User Related Commands
+
+#### Get the Local Users
 ```bash
 esxcli system account list
 
@@ -53,7 +82,7 @@ root     Administrator
 ...      .......
 ```
 
-## Create a Local User
+#### Create a Local User
 __Options__: all of the following __IS REQUIRED__
 - ```-d``` "user description" 
 - ```-i``` actual username
@@ -64,3 +93,28 @@ __Options__: all of the following __IS REQUIRED__
 esxcli system account add -d=”Altaro Guest” -i=”altaro” -p=”dsfewfewf*3!4404″ -c=”dsfewfewf*3!4404″
 ```
 
+
+----------------
+
+
+# VM Related Commands
+
+#### List All VMs Module Processes
+```bash
+esxcli vm process list
+```
+
+#### Kill a VMs Process
+```bash
+esxcli vm process kill -w <world_id>
+```
+#### List ALL VM Processes
+```bash
+esxcli system process list
+
+# output
+       Id      Cartel Id   Name              Security Domain   Command Line
+---------      ---------   ---------------   ---------------   --------------------------------------
+65537          12          idle2             superDom          ...
+383542         66970       python            superDom           python /bin/esxcli system process list
+```
