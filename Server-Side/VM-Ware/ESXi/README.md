@@ -11,6 +11,34 @@ reboot -f
 shutdown
 ```
 
+-----------------
+
+# Backup & Restore Related Commands/Process
+
+#### Backup the ```host_config``` File for ESXi
+- backup command
+```bash
+vim-cmd hostsvc/firmware/backup_config
+```
+- the above command creates a backup located in ```/scratch/downloads``` and will generate a URL to navigate to
+- navigate to the provided URL, which appears like so: ```https://*/downloads/520c76d2-f4f5-f230-5666-fad90c9e0d43/yourbackup_bundle.tgz```
+- be sure to place your host IP where the asterisk is located which should trigger the download
+
+#### Restore the ```host_config``` for ESXi
+```bash
+vim-cmd hostsvc/maintenance_mode_enter
+vim-cmd hostsvc/firmware/restore_config /tmp/configBundle.tgz
+```
+
+### Snapshots
+
+##### Take a Snapshot
+- NOTE: to take a snapshot you MUST provide the ```vmid``` AND a name for the snapshot
+```bash
+vim-cmd vmsvc/snapshot.create <vmid> <name_of_snapshot>
+```
+
+
 -------------------
 
 
