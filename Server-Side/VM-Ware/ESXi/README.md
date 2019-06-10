@@ -90,6 +90,9 @@ __Options__: all of the following __IS REQUIRED__
   - ```-c``` confirmation of user's password
 
 ```bash
+# syntax
+esxcli system account add -d="<user_description>" -i="<username>" -p="<password>" -c="<confirm_password>"
+
 esxcli system account add -d=”Altaro Guest” -i=”altaro” -p=”dsfewfewf*3!4404″ -c=”dsfewfewf*3!4404″
 ```
 
