@@ -10,3 +10,56 @@ reboot -f
 # shutdown
 shutdown
 ```
+
+
+## Get VM System Info
+```bash
+esxcli system version get
+
+# output
+  Product: VMware ESXi
+  Version: 6.5.0
+  Build: Releasebuild-10175896
+  Update: 2
+  Patch: 61
+```
+
+## Get the Install Date
+```bash
+esxcli system stats installtime get
+
+# output
+2019-04-1521:48:02
+```
+
+### Get Hostname 
+```bash
+esxcli system hostname get
+
+# output
+  Domain Name: yourdomain.local
+  Full Qualified Domain Name: localhost.yourdomain.local
+  Host Name: localhost
+```
+
+## Get the Local Users
+```bash
+esxcli system account list
+
+# output
+User ID  Description
+-------  -----------
+root     Administrator
+...      .......
+```
+
+## Create a Local User
+__Options__: all of the following __IS REQUIRED__
+- ```-d``` "user description" 
+- ```-i``` actual username
+- ```-p``` user's password
+  - ```-c``` confirmation of user's password
+
+```bash
+esxcli system account add -d=”Altaro Guest” -i=”altaro” -p=”dsfewfewf*3!4404″ -c=”dsfewfewf*3!4404″
+```
