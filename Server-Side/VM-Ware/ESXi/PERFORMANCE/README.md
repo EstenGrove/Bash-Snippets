@@ -36,22 +36,22 @@ This measures the rate at which bytes are sent and received over each network ad
 - The network is saturated if you discover that more than 70 percent of the interface is consumed.
 
 
-#### __ Physical Disk: Avg. Disk sec/Read__
+#### __Physical Disk: Avg. Disk sec/Read__
 Measures the average read per sec from disk. 
 - Should never be greater than 25ms.
 
 
-#### __ Physical Disk: Avg. Disk sec/Write__
+#### __Physical Disk: Avg. Disk sec/Write__
 Measures the average write per second to disk
 - Should never be greater than 25ms.
 
 
-#### __ Physical Disk: Avg. Disk Queue Length__
+#### __Physical Disk: Avg. Disk Queue Length__
 Measures the average amount of I/O operations that are queued and waiting for the disk to become available.
 - If the value is larger thant 2x the number of spindles than that disk is likely having a bottleneck issue.
 
 
-#### __ Physical Disk: Idle__
+#### __Physical Disk: Idle__
 Measures the % of time the disk was idle.
 - If this falls below 20% the disk is likely saturated. Consider replacing disk with a faster disk system.
 
