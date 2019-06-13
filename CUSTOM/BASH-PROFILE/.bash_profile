@@ -60,7 +60,11 @@ alias BASH='nano .bash_profile'
 # Git Add, Commit, Push
 acp ()
 {
-        git add -A;git commit -m "$1";git push
+     if [[ $2 -eq 0 ]]; then
+          git add -A;git commit -m "$1";git push origin master
+     else
+          git add -A;git commit -m "$1";git push origin "$2"
+     fi
 }
 
 # Git Fetch, and Pull - get the latest
