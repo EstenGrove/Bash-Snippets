@@ -58,13 +58,15 @@ alias BASH='nano .bash_profile'
 
 
 # Git Add, Commit, Push
-acp ()
-{
-     if [[ $2 -eq 0 ]]; then
-          git add -A;git commit -m "$1";git push origin master
-     else
-          git add -A;git commit -m "$1";git push origin "$2"
-     fi
+# the script checks if the user specified a branch name, 
+# if no branch name, then defaults to master
+
+acp () {
+        if [[ -z "$2" ]]; then  
+                git add -A;git commit -m "$1";git push origin master
+        else
+                git add -A;git commit -m "$1";git push origin "$2"
+        fi
 }
 
 # Git Fetch, and Pull - get the latest
