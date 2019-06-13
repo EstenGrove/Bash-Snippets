@@ -92,6 +92,14 @@ greeting $name
 # Output
 Hello Esten
 ```
+#### __Check for Empty Variable Or User Input Variable__
+```bash
+if [[ -z "$var" ]]; then
+  echo "EMPTY variable"
+else
+  echo "NOT EMPTY variable"
+fi
+```
 
 -------------------
 
