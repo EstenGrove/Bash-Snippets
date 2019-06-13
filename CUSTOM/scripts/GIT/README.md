@@ -4,13 +4,20 @@
 ### Git Add, Commit and Push Script
 - NOTE: to change the branch that you're pushing to it's best to create a separate alias. ALSO, may need to source???
 ```bash
-acp (){
-  git add -A;git commit -m "$1";git push -u origin master
+# the script checks if the user specified a branch name, if no branch name, then defaults to master
+
+acp () {
+        if [[ -z "$2" ]]; then  
+                git add -A;git commit -m "$1";git push origin master
+        else
+                git add -A;git commit -m "$1";git push origin "$2"
+        fi
 }
+
 ```
 - To Run the command:
 ```bash
-acp "Comment goes here..."
+acp "Comment goes here..." "<branch_name>"
 ```
 
 ### Git Fetch and Pull Script
