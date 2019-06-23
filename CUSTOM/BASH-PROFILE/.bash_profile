@@ -132,6 +132,7 @@ alias BASH='nano .bash_profile'
 
 ######### FUNCTIONS #########
 
+### GIT FUNCTIONS & HELPERS ###
 
 # Git Add, Commit, Push
 acp ()
@@ -143,3 +144,12 @@ acp ()
 gfp () {
         git fetch; git pull
 }
+
+### MISC FUNCTIONS & HELPERS ###
+
+# Generate a random string of custom length
+nwps() {
+     pwgen -s "$1" 1
+}
+# Example: nwps 6: will generate a 6 character random string
+
