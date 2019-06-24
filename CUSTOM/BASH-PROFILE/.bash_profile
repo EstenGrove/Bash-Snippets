@@ -145,6 +145,12 @@ gfp () {
         git fetch; git pull
 }
 
+# Git: Change branch
+cb (){
+     git checkout "$1"
+}
+# example: cb "features" - will change to the features branch
+
 ### MISC FUNCTIONS & HELPERS ###
 
 # Generate a random string of custom length
