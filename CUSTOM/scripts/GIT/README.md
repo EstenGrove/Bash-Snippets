@@ -28,7 +28,14 @@ gfp () {
 ```
 - To Run the command: ```gfp```
 
-
+### Change Branchs Quickly
+```bash
+cb () {
+        git checkout "$1"
+}
+# Example: will change to the "features" branch
+# cb "features"
+```
 
 ### Git Diffing
 - check for differences between two different commit trees and install the needed dependencies IF changes are found.
