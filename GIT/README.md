@@ -126,6 +126,16 @@ git remote update --prune
 
 # Working with Changes & Statuses
 
+### Sync with Remote and Overwrite Local Changes
+```bash
+git fetch origin && git reset --hard origin/master && git clean -f -d
+```
+
+### List All Branches That Have Been Merged Into Master
+```bash
+git branch --merged master
+```
+
 ### Save Changes to Commit Later
 - This is helpful when you need to pull the latest changes but you don't want it to overwrite your own
 ```bash
