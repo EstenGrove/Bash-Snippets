@@ -43,7 +43,7 @@ git push -u origin master
 ------------------------
 
 
-## Working with Branches
+# Working with Branches
 
 ### Create a Branch
 ```bash
@@ -124,7 +124,7 @@ git remote update --prune
 ------------------------
 
 
-## Working with Changes & Statuses
+# Working with Changes & Statuses
 
 ### Save Changes to Commit Later
 - This is helpful when you need to pull the latest changes but you don't want it to overwrite your own
