@@ -54,26 +54,6 @@ alias BASH='nano .bash_profile'
 
 
 
-######### FUNCTIONS #########
-
-
-# Git Add, Commit, Push
-# the script checks if the user specified a branch name, 
-# if no branch name, then defaults to master
-
-acp () {
-        if [[ -z "$2" ]]; then  
-                git add -A;git commit -m "$1";git push origin master
-        else
-                git add -A;git commit -m "$1";git push origin "$2"
-        fi
-}
-
-# Git Fetch, and Pull - get the latest
-gfp () {
-        git fetch; git pull
-}
-stevengore@~ $ cat .bash_profile 
 
 # Formats the terminal prompt, shows: <user>@~/WorkingDirectory [git-branch]$ type command here...
 export PATH=$PATH:/Users/stevengore/bin
@@ -122,9 +102,6 @@ alias openPorts='sudo lsof -i | grep LISTEN'                                    
 alias showBlocked='sudo ipfw list'                                                   # Show all ipfw blocked/blacklisted IPs
 
 
-
-
-
 # Change/Edit the .bash_profile
 alias BASH='nano .bash_profile'
 
@@ -132,28 +109,50 @@ alias BASH='nano .bash_profile'
 
 ######### FUNCTIONS #########
 
-### GIT FUNCTIONS & HELPERS ###
+############ GIT FUNCTIONS & ALIASES ################
 
 # Git Add, Commit, Push
-acp ()
-{
-        git add -A;git commit -m "$1";git push
+# the script checks if the user specified a branch name, 
+# if no branch name, then defaults to master
+
+acp () {
+        if [[ -z "$2" ]]; then  
+                git add -A;git commit -m "$1";git push origin master
+        else
+                git add -A;git commit -m "$1";git push origin "$2"
+        fi
 }
 
-# Git Fetch, and Pull - get the latest
+## Git Fetch, and Pull - get the latest
 gfp () {
         git fetch; git pull
 }
 
-# Git: Change branch
+## Git: Change branch
 cb (){
      git checkout "$1"
 }
 # example: cb "features" - will change to the features branch
 
+## MOST USEFUL & VERBOSE Graphical Log of commits
+glog(){
+        git log --graph
+}
+
+## Pretty Print a Log of the last x commits
+plog(){
+        git log -"$1" --pretty --oneline
+}
+# Example Usage: plog "10" - will show that last 10 commits
+
+## Pretty Print a Verbose Graph & Log of Commits
+dlog(){
+        git log --all --decorate --oneline --simplify-by-decoration
+}
+
 ### MISC FUNCTIONS & HELPERS ###
 
-# Generate a random string of custom length
+## Generate a random string of custom length
 nwps() {
      pwgen -s "$1" 1
 }
