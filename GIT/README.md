@@ -107,8 +107,26 @@ git reset --hard HEAD <commit-ID>
 # example: git reset --hard HEAD f1d2325
 ```
 
-### Checking Changes and Status
+### Checking Changes and Status and General Information
 ```bash
 # this will print a commit history w/ comments, ID and a visual graph of commits
 git log --graph
+
+# to get a more colorized output of the last 5 commits
+git log -5 --pretty --oneline
+
+###### OUTPUT #######
+#5377a90 (HEAD -> master, origin/master, origin/HEAD) Updated comments and docs. Pushed new items.
+#506cb39 Added: useWasTouched, useWasHovered. Added comments to various components for clarity.
+#9f3d5b8 Fixed incorrect file name
+#1c7d24d Added 'utilites': useDebounce, usePrevious, useStringGenerator, useSlicer. Added comments and made minor improvements to hooks
+#c39f8c2 Added new fields to log tables
+
+# get a quick log of contributors and see commits per person
+git shortlog -sn
+
+# to get a detailed, colorized log output of changes. Helpful to create an alias for this
+git log --all --graph --decorate --oneline --simplify-by-decoration
+
+
 ```
