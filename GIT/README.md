@@ -1,4 +1,5 @@
 # Git Commands, Snippets and Descriptions
+For a quick set of guides and glossaries: ``` git help -g ```
 
 ## Config & Setup
 
