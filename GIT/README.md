@@ -144,6 +144,7 @@ git stash
 
 ### Git Reset
 Fixes issues when you commit changes that are NOT complete. Resets your index to the latest commit.
+- It allows you to "point" a branch at another branch. For instance, if you want to point your master branch to a branch called "C" you could run: ```git reset C``` while the master branch is checked out.
 ```bash
 # first run git status to find the commit you want to reset to
 git status
