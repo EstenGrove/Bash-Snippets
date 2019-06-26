@@ -126,6 +126,42 @@ git remote update --prune
 
 # Working with Changes & Statuses
 
+### Check What Files Were Changed/Modified in a Commit
+-First you need to commit ID
+```bash
+# this will show the last commits in a graphical tree format
+git log --graph
+
+# then when you find the commit that you want more details on, copy the commit ID/ref and run
+git show <commit_id>
+```
+
+### Checking Changes and Status and General Information
+```bash
+# this will print a commit history w/ comments, ID and a visual graph of commits
+git log --graph
+
+# to get a more colorized output of the last 5 commits
+git log -5 --pretty --oneline
+
+###### OUTPUT #######
+#5377a90 (HEAD -> master, origin/master, origin/HEAD) Updated comments and docs. Pushed new items.
+#506cb39 Added: useWasTouched, useWasHovered. Added comments to various components for clarity.
+#9f3d5b8 Fixed incorrect file name
+#1c7d24d Added 'utilites': useDebounce, usePrevious, useStringGenerator, useSlicer. Added comments and made minor improvements to hooks
+#c39f8c2 Added new fields to log tables
+
+# get a quick log of contributors and see commits per person
+git shortlog -sn
+
+# to get a detailed, colorized log output of changes. Helpful to create an alias for this
+git log --all --graph --decorate --oneline --simplify-by-decoration
+
+
+# check how many lines of code you're written today
+git diff --shortstat "@{0 day ago}"
+```
+
 ### Sync with Remote and Overwrite Local Changes
 ```bash
 git fetch origin && git reset --hard origin/master && git clean -f -d
@@ -156,32 +192,6 @@ git reset --soft HEAD@{1}
 git reset --hard HEAD <commit-ID>
 
 # example: git reset --hard HEAD f1d2325
-```
-
-### Checking Changes and Status and General Information
-```bash
-# this will print a commit history w/ comments, ID and a visual graph of commits
-git log --graph
-
-# to get a more colorized output of the last 5 commits
-git log -5 --pretty --oneline
-
-###### OUTPUT #######
-#5377a90 (HEAD -> master, origin/master, origin/HEAD) Updated comments and docs. Pushed new items.
-#506cb39 Added: useWasTouched, useWasHovered. Added comments to various components for clarity.
-#9f3d5b8 Fixed incorrect file name
-#1c7d24d Added 'utilites': useDebounce, usePrevious, useStringGenerator, useSlicer. Added comments and made minor improvements to hooks
-#c39f8c2 Added new fields to log tables
-
-# get a quick log of contributors and see commits per person
-git shortlog -sn
-
-# to get a detailed, colorized log output of changes. Helpful to create an alias for this
-git log --all --graph --decorate --oneline --simplify-by-decoration
-
-
-# check how many lines of code you're written today
-git diff --shortstat "@{0 day ago}"
 ```
 
 ### Uncommit Everything, But Still Save the Changes (Soft-Reset)
