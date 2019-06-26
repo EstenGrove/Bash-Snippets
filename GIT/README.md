@@ -136,6 +136,28 @@ git log --graph
 git show <commit_id>
 ```
 
+### Show a Log of Changes to a Repo's ```HEAD```
+```bash
+git reflog
+
+### OUTPUT ###
+# e95e7c7 (HEAD -> master, origin/master) HEAD@{0}: commit: Resynced repo.
+# f05d8ec HEAD@{1}: commit: Fixed sidenav 'overlay' bug.
+# c570d99 HEAD@{2}: commit: Added: AfternoonPage component w/ working form. Starting to implement Context to enable 'completion summaries'.
+# e977e39 HEAD@{3}: pull: Fast-forward
+
+```
+
+### Check Who Made Changes & When (Git Blame)
+```bash
+git blame <my_file>
+
+### OUTPUT ###
+#e95e7c73 (EstenGrove 2019-06-26 08:51:59 -0700  1) This is to be the first-form prototype. A version 1 demo that will be presented Friday June 28th.
+#^1bbef14 (EstenGrove 2019-06-17 07:09:37 -0700  2)
+#00bda746 (EstenGrove 2019-06-21 11:20:41 -0700  3)
+
+```
 ### Checking Changes and Status and General Information
 ```bash
 # this will print a commit history w/ comments, ID and a visual graph of commits
@@ -162,6 +184,11 @@ git log --all --graph --decorate --oneline --simplify-by-decoration
 git diff --shortstat "@{0 day ago}"
 ```
 
+--------------------------
+
+# Working With Branches
+
+
 ### Sync with Remote and Overwrite Local Changes
 ```bash
 git fetch origin && git reset --hard origin/master && git clean -f -d
@@ -178,9 +205,42 @@ git branch --merged master
 git stash
 ```
 
-### Git Reset
+-----------------------
+
+# Fixing Changes, Branches and Other
+- ```git reset```, ```git revert```
+  - ```git revert``` can ONLY be used at the commit level.
+  - ```git reset``` can be used on commits AND individual files.
+
+#### Git Reset
 Fixes issues when you commit changes that are NOT complete. Resets your index to the latest commit.
 - It allows you to "point" a branch at another branch. For instance, if you want to point your master branch to a branch called "C" you could run: ```git reset C``` while the master branch is checked out.
+
+##### Discard Staged and Unstaged Changes Since the Last Commit
+```bash
+git reset --hard HEAD
+```
+
+#### Discard LOCAL Unstaged Changes Since the Last Commit
+- This is best for local only changes
+```bash
+git checkout <commit_id>
+```
+#### Git Revert
+- This will undo the effects of changes in my last commit.
+```bash
+git revert <commit_id>
+```
+#### Delete Untracked Files From Local Directory
+- ```-n``` is to do a "dry-run". It won't delete anything, only show what will be deleted.
+- ```-f``` is to actually delete the files.
+- ```-d``` is to remove the untracked directories.
+  - This will NOT effect files and folders entered in .gitignore
+```bash
+git clean -n
+```
+#### Alternate Method for Deleting Changes
+
 ```bash
 # first run git status to find the commit you want to reset to
 git status
