@@ -54,6 +54,15 @@ git branch "features"
 git checkout features
 ```
 
+### Track Upstream Branch
+```bash
+git push -u origin/<my_branch>
+
+# List all branches and their upstreams
+git branch -vv
+```
+
+
 ### Jump Back to the Last Branch
 ```bash
 git checkout -
@@ -121,6 +130,32 @@ git remote prune origin --dry-run
 git remote update --prune
 ```
 
+### Deleting Branches
+- Delete local branch
+```bash
+git branch -d <local_branch>
+```
+- Delete remote branch
+```bash
+git push origin --delete <remote_branch>
+```
+
+### Sync with Remote and Overwrite Local Changes
+```bash
+git fetch origin && git reset --hard origin/master && git clean -f -d
+```
+
+### List All Branches That Have Been Merged Into Master
+```bash
+git branch --merged master
+```
+
+### Save Changes to Commit Later (git stash)
+- This is helpful when you need to pull the latest changes but you don't want it to overwrite your own
+```bash
+git stash
+```
+
 ------------------------
 
 
@@ -184,26 +219,11 @@ git log --all --graph --decorate --oneline --simplify-by-decoration
 git diff --shortstat "@{0 day ago}"
 ```
 
---------------------------
-
-# Working With Branches
-
-
-### Sync with Remote and Overwrite Local Changes
+### Undo a Commit By Creating a New Commit
 ```bash
-git fetch origin && git reset --hard origin/master && git clean -f -d
+git revert <commit-ish>
 ```
 
-### List All Branches That Have Been Merged Into Master
-```bash
-git branch --merged master
-```
-
-### Save Changes to Commit Later
-- This is helpful when you need to pull the latest changes but you don't want it to overwrite your own
-```bash
-git stash
-```
 
 -----------------------
 
