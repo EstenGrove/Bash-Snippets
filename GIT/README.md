@@ -40,7 +40,7 @@ git push -u origin master
 ```
 
 
-------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 
 # Working with Branches
@@ -61,7 +61,10 @@ git push -u origin/<my_branch>
 # List all branches and their upstreams
 git branch -vv
 ```
-
+### Get ONLY Remote Branches
+```bash
+git branch -r
+```
 
 ### Jump Back to the Last Branch
 ```bash
@@ -156,7 +159,7 @@ git branch --merged master
 git stash
 ```
 
-------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 
 # Working with Changes & Statuses
@@ -219,13 +222,28 @@ git log --all --graph --decorate --oneline --simplify-by-decoration
 git diff --shortstat "@{0 day ago}"
 ```
 
+### See All Commits Made Since Forking From master
+```bash
+git log --no-merges --stat --reverse master..
+```
+
+### Check Changes Since 2 Weeks Ago
+```bash
+# Method 1
+git log --no-merges --raw --since='2 weeks ago'
+
+# Method 2: simpler!!!
+git whatchanged --since='2 weeks ago'
+```
+
+
 ### Undo a Commit By Creating a New Commit
 ```bash
 git revert <commit-ish>
 ```
 
 
------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 # Fixing Changes, Branches and Other
 - ```git reset```, ```git revert```
@@ -284,15 +302,22 @@ git reset --soft HEAD~3
 git reflog
 ```
 
-### Stash Changes for Later
+### Stash Changes for Later (git stash)
 ```bash
 git stash
 
 # to retrieve the changes that were stashed
 git stash apply
-# OR to retrieve your stashed changes AND remove the stash from the stash "array"
+# OR to retrieve & apply your stashed changes AND remove the stash from the stash "array"
 git stash pop
 ```
+
+### List ALL Saved Stashes
+```bash
+git stash list
+```
+
+###
 
 ### Change/Rewrite Last Commit
 This command allows you to change: commit comments, comment content by adding or removing files
