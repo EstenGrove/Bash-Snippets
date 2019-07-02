@@ -227,6 +227,33 @@ git diff --shortstat "@{0 day ago}"
 git log --no-merges --stat --reverse master..
 ```
 
+### See Detailed Info of Commits
+```bash
+git log --stat
+```
+```
+## OUTPUT ##
+commit f54fe2e4256ea2f30bea6b7f0566e96e333d8079
+Author: Esten <estengrove99@gmail.com>
+Date:   Mon Jun 24 16:03:07 2019 -0700
+
+    Fixed solobracket-issue
+
+ src/components/CardContainer.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4a2e415abfd001db39485423a4f85aa34b4f008d
+Author: Esten <estengrove99@gmail.com>
+Date:   Mon Jun 24 14:09:32 2019 -0700
+
+    Updated Readme.md w/ task completions.
+
+ README.md                       | 17 ++++++++++-------
+ src/components/CardContainer.js |  8 +++++---
+ src/components/Nav.js           |  4 ++--
+ 3 files changed, 17 insertions(+), 12 deletions(-)
+```
+
 ### Check Changes Since 2 Weeks Ago
 ```bash
 # Method 1
