@@ -19,6 +19,9 @@ alias gld='git log --all --graph --decorate --oneline --simplify-by-decoration'
 
 # Provides detailed summary of git log w/ list of files modified
 alias gls='git log --stat'
+
+# Provides CONCISE Output w/ Comments and CommitID ONLY
+alias glp='git log --pretty=format:'%h : %s' --graph' 
 ```
 
 ### Functions
