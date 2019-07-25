@@ -71,6 +71,15 @@ git branch -r
 git checkout -
 ```
 
+## Clone ONLY a Specific Branch from a Repo
+```bash
+git clone --single-branch --branch <branchname> <remote-repo>
+
+# USAGE EXAMPLE
+
+git clone --single-branch --branch features https://github.com/EstenGrove/MyRepo
+```
+
 ### Pushing Changes
 ```bash
 # add tracking for any new files
