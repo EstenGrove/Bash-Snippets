@@ -50,6 +50,18 @@ grep -inR --color "miller"
 -----------------
 
 
+## Search for Multiple Patterns or Keywords at Once
+```bash
+grep "ptrn1\|ptrn2\|ptrn3\|ptrn4"
+
+# USAGE EXAMPLE
+whois echo-alchemist.com | grep --color "Domain Status:\|Registrar:"
+```
+
+
+-----------------
+
+
 ## Search for String, Recursively in All Files
 ```bash
 grep -ir string *
@@ -69,7 +81,6 @@ grep --invert-match "2019-3-12" log.txt
 grep -n "2019" log.txt
 ```
 - the above will search for 2019 in ```log.txt``` and print the matches prefixed with the line number
-
 
 
 ## Match Line Endings using ```REGEX```
