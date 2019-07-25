@@ -75,9 +75,9 @@ git checkout -
 ```bash
 git clone --single-branch --branch <branchname> <remote-repo>
 
-# USAGE EXAMPLE
+# USAGE EXAMPLE: be sure to grab the clone URL
 
-git clone --single-branch --branch features https://github.com/EstenGrove/MyRepo
+git clone --single-branch --branch features https://github.com/EstenGrove/MyRepo.git
 ```
 
 ### Pushing Changes
