@@ -78,6 +78,11 @@ git clone --single-branch --branch <branchname> <remote-repo>
 # USAGE EXAMPLE: be sure to grab the clone URL
 
 git clone --single-branch --branch features https://github.com/EstenGrove/MyRepo.git
+
+# ALT USAGE EXAMPLE
+# Pseudo Code: git clone -b <branch_name> --single-branch <repo_url>
+
+git clone -b features_branch --single-branch https://github.com/EstenGrove/MyRepo.git
 ```
 
 ### Pushing Changes
