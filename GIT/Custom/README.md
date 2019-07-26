@@ -21,7 +21,7 @@ alias gld='git log --all --graph --decorate --oneline --simplify-by-decoration'
 alias gls='git log --stat'
 
 # Provides CONCISE Output w/ Comments and CommitID ONLY
-alias glp='git log --pretty=format:'%h : %s' --graph' 
+alias glp='git log --pretty=format:"%h : %s" --graph' 
 ```
 
 ### Functions
