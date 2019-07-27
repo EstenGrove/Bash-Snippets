@@ -10,6 +10,25 @@ last
 last -20
 ```
 
+## Hardware Info
+Various commands for checking info about the computer's hardware
+
+#### Check Memory-Swap Usage
+```bash
+sysctl vm.swapusage
+```
+
+#### Check Number of CPU Cores
+```bash
+sysctl -n hw.ncpu 
+```
+#### Check Computer's Load Average
+```bash
+sysctl vm.loadavg 
+```
+
+------------
+
 ## Environment
 
 #### Print Environment Variables
