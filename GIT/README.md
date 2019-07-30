@@ -171,6 +171,10 @@ git branch --merged master
 - This is helpful when you need to pull the latest changes but you don't want it to overwrite your own
 ```bash
 git stash
+
+# Also can leave a comment for discerning between "stashes"
+
+git stash save "Some comment here..."
 ```
 
 ------------------------------------------------------------------------------------------------------------------------
