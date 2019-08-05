@@ -38,6 +38,12 @@ __Options Flags:__
 - ```-s```
   - suppress error messages, like unable to read files or directories
   
+### Grep For Lines Above AND Below of Pattern
+```bash
+# The following will print 2 lines above and below
+less .bash_profile | grep "vhost" -C 2
+```
+  
 ### Print Output w/ Color
 ```bash
 grep -inR --color "miller"
