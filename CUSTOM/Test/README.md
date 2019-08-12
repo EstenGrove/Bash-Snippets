@@ -2,6 +2,10 @@
 
 The API can be browsed further with minor documentation @ [swagger.io](http://apitest.aladvantage.com/swagger/ui/index)
 
+
+${toc}
+
+
 -----
 
 ## **API Addresses**
