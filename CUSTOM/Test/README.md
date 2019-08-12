@@ -4,6 +4,13 @@ The API can be browsed further with minor documentation @ [swagger.io](http://ap
 
 -----
 
+## **API Addresses**
+
+**BaseURL:** https://api.aladvantage.com/ALADVSystem/GetApplication
+**TestURL:** http://apitest.aladvantage.com/alaservices/v1/
+
+-----
+
 ## **Main API Routes**
 
 <details>
@@ -34,7 +41,7 @@ The API can be browsed further with minor documentation @ [swagger.io](http://ap
 * * *
     
 <details>
-    <summary><b>ALADVWarehouse:</b><b> Older Data </b></summary>    
+    <summary>ALADVWarehouse: Older Data</summary>    
         
 - ALADVWarehouse
     - This is where stored procedures data and SQL meta data is stored, monthly metrics and other report data 
@@ -68,28 +75,77 @@ The API can be browsed further with minor documentation @ [swagger.io](http://ap
 
 * * *
 
+<details>
+    <summary>Log: Used for Meta Data</summary>
+
 - Log
     - This is used for meta data, mostly SQL related:
         - ```/alaservices/v1/Log/RegisterAuditLog...``` 
+
+</details> 
+        
+        
+* * *
+        
+<details>
+    <summary><b style="color: #5183f5;">ModuleDocuments:</b><b style="color: #44F0B5;"> Used for Document Storage (short-term) </b></summary> 
+        
 - **ModuleDocuments**
     - This is where template data is stored primarily, prior to "long-term storage":
         - ```/alaservices/v1/Documents/GetTemplateInfo...``` 
+
+</details> 
+        
+        
+* * *
+
+
+<details>
+    <summary>Log: Used for Meta Data</summary>
+
 - ModuleResident
     - This holds only a signle method: ```/alaservices/v1/Resident/CreateResident...```
+
+</details> 
+        
+        
+* * *
+
+        
+<details>
+    <summary><b style="color: #5183f5;">Security:</b><b style="color: #44F0B5;"> Authentication (Login) </b></summary> 
+
+
 - **Security**
     - This is used for logging in(authentication):
         - ```/alaservices/v1/Security/Login```
         - ```/alaservices/v1/Security/LoginValid```
         - ``` /alaservices/v1/Security/Logout```
         - ``` /alaservices/v1/Security/Ping```
+        
+        
+        
+
+</details> 
+        
+        
+* * *
+
+
+<details>
+    <summary><b style="color: #5183f5;">Upload:</b><b style="color: #44F0B5;"> Enables user to Upload Documents (Document Storage </b></summary> 
+
 - **Upload**
     - This is used for *uploading* user-generated files (doc uploader app):
         - ```/alaservices/v1/Upload/PutFile```
         - ``` /alaservices/v1/Upload/PutFileMany```
         - ``` /alaservices/v1/Upload/PutFile2```
 
-## **API Addresses**
+</details> 
+        
+        
+* * *
 
-**BaseURL:** https://api.aladvantage.com/ALADVSystem/GetApplication
-**TestURL:** http://apitest.aladvantage.com/alaservices/v1/
+
+
 
