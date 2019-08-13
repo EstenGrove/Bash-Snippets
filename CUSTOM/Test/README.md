@@ -18,11 +18,9 @@ The API can be browsed further with minor documentation @ [swagger.io](http://ap
     <summary><b style="color: #5183f5;">Advantage:</b><b style="color: #44F0B5;"> Fetching ADLs & Tasks</b></summary>
 
 - **Advantage**
-    - This is where much of the ADL data will come from, likely:
+    - This is where ADL data such as Tasks, Statuses, Schedules etc is stored:
         - ``` /alaservices/v1/GetAssessmentCategory```
-    - Also, stores the Tasks, Statuses, Schedules and more:
         - ``` /alaservices/v1/GetAssessmentResidentTask```
-    - This is where much of the Assessment related data is stored:
         - ``` /alaservices/v1/GetAssessmentTaskStatus```
 
 
