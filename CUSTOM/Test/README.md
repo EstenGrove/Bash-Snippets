@@ -7,8 +7,8 @@ The API can be browsed further with minor documentation @ [swagger.io](http://ap
 
 ## **API Addresses**
 
-**BaseURL:** https://api.aladvantage.com/ALADVSystem/GetApplication
-**TestURL:** http://apitest.aladvantage.com/alaservices/v1/
+- **BaseURL:** https://api.aladvantage.com/ALADVSystem/GetApplication
+- **TestURL:** http://apitest.aladvantage.com/alaservices/v1/
 
 -----
 
