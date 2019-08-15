@@ -15,3 +15,7 @@
   - [Git Diff: check for differences in subtree or commits](https://github.com/EstenGrove/Bash-Snippets/blob/master/CUSTOM/scripts/GIT/git-diff.sh)
 
 
+### Configuring Git
+```bash
+git config --add <setting>
+```
