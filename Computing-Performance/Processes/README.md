@@ -1,5 +1,34 @@
 # Processes and Other Scripts
 
+## Git Bash Versions
+
+
+#### Get a List of All Tasks
+```bash
+tasklist
+
+# output
+
+# Name            PID         Session #          Mem Usage
+# Registry      17965          Services                 8k
+# node.exe      12708          Services            32,540k
+#
+#
+#
+#
+```
+
+#### Kill a Process w/ Taskkill
+```bash
+taskkill /F /PID <pid>
+
+# example
+taskkill /F /PID 99462
+```
+
+
+------------
+
 
 ## Checking Processes
 ```bash
