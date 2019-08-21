@@ -3,6 +3,10 @@ A collection of ```netstat``` commands
 
 ## Check For Listening Ports
 ```bash
+# this will give you what's running on port 3000 (localhost)
+netstat -a -o -n | grep ":3000"
+
+
 # most useful w/ clean and clear output of ports, active connections TCP/IP and UDP
 netstat -a
 
