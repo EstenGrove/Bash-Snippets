@@ -19,8 +19,9 @@ tasklist
 ```
 
 #### Kill a Process w/ Taskkill
+- NOTE: ```taskkill``` requires ```//``` for declaring flags or options.
 ```bash
-taskkill /F /PID <pid>
+taskkill /F //PID <pid>
 
 # example
 taskkill /F /PID 99462
