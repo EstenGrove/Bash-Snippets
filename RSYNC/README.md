@@ -3,5 +3,7 @@
 
 ## Basic Sytnax
 ```bash
+# rsync [options] source destination
+
 rsync local-file user@remote-host:remote-file
 ```
