@@ -9,6 +9,15 @@
 - [SORT](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/SORT)
 - [WORD-COUNT(wc)](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/WORD-COUNT(wc))
 
+## Renaming Files
+```bash
+# rename the file test.txt => test.txt.old
+test.txt{,.old}  # test.txt.old
+
+# rename it back to test.txt
+test.txt{.old,}  # test.txt
+```
+
 ## Copying Files
 
 #### Copy a File
