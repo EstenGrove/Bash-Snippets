@@ -12,10 +12,10 @@
 ## Renaming Files
 ```bash
 # rename the file test.txt => test.txt.old
-test.txt{,.old}  # test.txt.old
+mv test.txt{,.old}  # test.txt.old
 
 # rename it back to test.txt
-test.txt{.old,}  # test.txt
+mv test.txt{.old,}  # test.txt
 ```
 
 ## Copying Files
