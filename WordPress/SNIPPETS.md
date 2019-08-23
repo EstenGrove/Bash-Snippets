@@ -2,7 +2,7 @@
 
 ### Download & install WordPress
 ```bash
-DLWP(){
+DLWPI(){
   wp core download;
   wp core install --url="$1"  --admin_name="$2" --admin_password="$3" --admin_email="$4"
 }
@@ -10,7 +10,34 @@ DLWP(){
 ## EXAMPLE USAGE:
 # Command => "domain" => "admin username" => "password" => "email"
 
-DLWP "https://mydomain.com" "myadmin" "P@ssw0rd1234" "myemail@gmail.com"
+DLWPI "https://mydomain.com" "myadmin" "P@ssw0rd1234" "myemail@gmail.com"
+```
+
+### ONLY Download Core Files
+```bash
+DLWP(){
+  wp core download
+}
+```
+
+## Search & Replace
+```bash
+# Syntax
+# Dry Run: wp search-replace <old_url> <new_url> --dry-run
+
+# Live Run(WARNING: BACKUP DB PRIOR TO RUNNING THIS!!! IT IS PERMANENT)
+
+wp seach-replace https://olddomain.com https://www.newdomain.com
+
+## Function Snippet
+
+WPSR(){
+  wp search-replace "$1" "$2"
+}
+
+# Example Usage: 
+WPSR "http://old.com" "https://www.new.com"
+
 ```
 
 ## Aliases
