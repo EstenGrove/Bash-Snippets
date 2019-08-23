@@ -3,10 +3,10 @@
 
 ## Command	Description
 
-**wp admin**	
+**wp admin**:	
 Open /wp-admin/ in a browser.
 
-**wp cache**	
+**wp cache**:	
 Adds, removes, fetches, and flushes the WP Object Cache object.
 
 **wp cap**	
