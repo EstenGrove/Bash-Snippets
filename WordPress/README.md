@@ -1,7 +1,30 @@
 # Using the ```WP-CLI```
 
 
-## Command	Description
+## Common Commands in ```WP-CLI```
+
+#### Handling Plugins from ```WP-CLI```
+```bash
+# Install & activate plugin
+wp install plugin <plugin_name> --activate
+
+# Example
+wp install plugin bbpress --activate
+
+# Deactivate Plugin
+wp plugin deactivate <plugin>
+
+# Deactivate ALL Plugins
+wp plugin deactivate --all
+```
+
+
+
+
+----------------------
+
+
+## Command	Index & Description
 
 **wp admin** -	
 Open /wp-admin/ in a browser.
