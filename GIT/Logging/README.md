@@ -29,3 +29,10 @@ git format-patch -1 HEAD
 git format-patch -1 <commit_id>
 
 ```
+
+--------
+
+### Search Git Log for a String (grep)
+```
+git log --all --grep="some string here"
+```
