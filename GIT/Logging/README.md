@@ -1,6 +1,10 @@
 # Git Logging
 Tips for formatting, printing and organizing git commit messages and log outputs.
 
+## Quick Access
+- [Search Logs](https://github.com/EstenGrove/Bash-Snippets/blob/master/GIT/Logging/README.md#search-git-log-for-a-string-grep)
+- [Print logs by date](#git-log-before-after-a-specific-date)
+
 
 ### Git Log Before/After a Specific Date
 ```bash
