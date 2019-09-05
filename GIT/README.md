@@ -5,9 +5,11 @@ For a quick set of guides and glossaries: ``` git help -g ```
 
 ### Check for "Admin Sesssion" (ie 'Run as Administrator')
 ```bash
+# one-liner
+
 if net session &> /dev/null;then echo "Admin!"; else echo "Not Admin!"; fi
 
--------
+# multi-line script
 if
     net session &> /dev/null;
 then
