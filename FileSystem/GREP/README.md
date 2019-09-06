@@ -12,6 +12,10 @@ __Options Flags:__
   - case-insensitive
     - ```grep -i "miller" file.txt
       - will search for "miller" regardless of case.
+- ```-B <number>```
+  - will print a specific number of lines **BEFORE** the matching word
+- ```-A```
+  - will print a specific number of lines **AFTER** the matching word.
 - ```-E``` is for *extended regex*
 - ```-R```
   - search recursively
@@ -38,7 +42,20 @@ __Options Flags:__
 - ```-s```
   - suppress error messages, like unable to read files or directories
   
-### Grep For Lines Above AND Below of Pattern
+### Grep For Lines ABOVE a Matching Pattern
+```bash
+# will print 3 lines *before* "bar" in foo.txt
+
+grep -B 3 bar foo.txt
+```
+### Grep For Lines AFTER a Matching Pattern
+```bash
+# will print 3 lines *after* "bar" in foo.txt
+
+grep -A 3 bar foo.txt
+```
+
+### Grep For Lines Above AND Below of Matching Pattern
 ```bash
 # The following will print 2 lines above and below
 less .bash_profile | grep "vhost" -C 2
