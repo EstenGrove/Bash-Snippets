@@ -1,15 +1,24 @@
 # Collection of Encryption-Related Scripts and Commands
-
+[Here's a great link with details](https://support.ssl.com/Knowledgebase/Article/View/19/0/der-vs-crt-vs-cer-vs-pem-certificates-and-how-to-convert-them)
 
 
 ---------------------
 
 # __SSL__
 
+#### View Encoded SSL Files (.pem, .p7b, .cer, .crt, .key)
+```bash
+openssl x509 -in <file.pem|.cer|.crt> -text -noout
+```
+
 
 #### Check SSL Expiry
 ```bash
 echo | openssl s_client -showcerts -servername google.com -connect gnupg.org:443 2>/dev/null | openssl x509 -inform pem -noout -text
+
+# if an error occurs like: unable to load certificate
+# then you're trying to load a DER encoded file
+
 ```
 
 #### Generate Public Key *from* Private Key
