@@ -23,7 +23,7 @@ echo | openssl s_client -showcerts -servername google.com -connect gnupg.org:443
 ## Generating Keys
 
 ### Generate Private Key
-NOTE: you should usually SSH into your web server to run these commands.
+NOTE: you should usually SSH into your web server to run these commands, *HOWEVER*, they can be run from **local.**
 ```bash
 openssl genrsa -out filename.key 2048
 ```
