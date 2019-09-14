@@ -6,19 +6,21 @@
 
 # __SSL__
 
-#### View Encoded SSL Files (.pem, .p7b, .cer, .crt, .key)
+## View Encoded SSL Files (.pem, .p7b, .cer, .crt, .key)
 ```bash
 openssl x509 -in <file.pem|.cer|.crt> -text -noout
 ```
 
 
-#### Check SSL Expiry
+## Check SSL Expiry
 ```bash
 echo | openssl s_client -showcerts -servername google.com -connect gnupg.org:443 2>/dev/null | openssl x509 -inform pem -noout -text
 
 # if an error occurs like: unable to load certificate
 # then you're trying to load a DER encoded file
 ```
+
+-----------------
 
 ## Generating Keys
 
@@ -35,11 +37,12 @@ ssh-keygen -y -f privatekey.pem > publickey.pem
 
 ## Generate a Certifcate-Signing-Request(CSR) w/ ```openssl```
 ```bash
-openssl req –new –newkey rsa:2048 –nodes –keyout server.key –out server.csr
+openssl req –new –newkey rsa:2048 –nodes –keyout MyPrivateKey.key –out MyCSR.csr
 ```
 
+-----------
 
-#### Generate a Self-Signed Certificate
+## Generate a Self-Signed Certificate
 - useful for working on localhost
 ```bash
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out certificate.crt
