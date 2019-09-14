@@ -18,13 +18,26 @@ echo | openssl s_client -showcerts -servername google.com -connect gnupg.org:443
 
 # if an error occurs like: unable to load certificate
 # then you're trying to load a DER encoded file
+```
 
+## Generating Keys
+
+### Generate Private Key
+NOTE: you should usually SSH into your web server to run these commands.
+```bash
+openssl genrsa -out filename.key 2048
 ```
 
 #### Generate Public Key *from* Private Key
 ```bash
 ssh-keygen -y -f privatekey.pem > publickey.pem
 ```
+
+## Generate a Certifcate-Signing-Request(CSR) w/ ```openssl```
+```bash
+openssl req –new –newkey rsa:2048 –nodes –keyout server.key –out server.csr
+```
+
 
 #### Generate a Self-Signed Certificate
 - useful for working on localhost
