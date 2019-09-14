@@ -13,8 +13,12 @@ cd ./ssh
 # List out current keys, if applicable
 ll
 
-# generate new keys
+##### GENERATE NEW KEYS (PRIV & PUB) #####
+# windows
 ssh-keygen -o
+
+# mac
+ssh-keygen -t rsa
 
 # type yes when prompted; then enter a name for the keys' file; then enter a password for the keys
 ```
