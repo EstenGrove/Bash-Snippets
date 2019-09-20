@@ -36,9 +36,14 @@ ssh-keygen -y -f privatekey.pem > publickey.pem
 ```
 
 ## Generate a Certifcate-Signing-Request(CSR) w/ ```openssl```
+- This will generate **both** the CSR and the private key. 
 ```bash
 openssl req –new –newkey rsa:2048 –nodes –keyout MyPrivateKey.key –out MyCSR.csr
+
+# Example Usage
+openssl req –new –newkey rsa:2048 –nodes –keyout myprivate.key –out mycsr.csr
 ```
+
 
 -----------
 
