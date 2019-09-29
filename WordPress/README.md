@@ -18,7 +18,17 @@ wp plugin deactivate <plugin>
 wp plugin deactivate --all
 ```
 
+---------------------
 
+
+#### Update ```home``` and ```site``` URL
+```bash
+# home url
+wp option update home 'http://example.com'
+
+# site url
+wp option update siteurl 'http://example.com'
+```
 
 
 ----------------------
