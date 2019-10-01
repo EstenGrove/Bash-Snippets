@@ -1,6 +1,20 @@
 # Using ```cURL```
 ```cURL``` is great tool for quickly testing network related things such as a new API, SSL connections and FTP uploads. 
 
+## Quick Access
+
+- [Requests](#requests)
+  - [GET](#get)
+  - [POST](#post)
+  - [PUT](#put)
+  - [DELETE](#delete)
+- [Testing 301 Redirects](#testing-301-redirects)
+- [Sending Data](#sending-data)
+- [Setting Headers](#using-and-setting-headers)
+  - [Return ONLY headers](#return-only-the-headers)
+  - [Make request w/ specific headers](#make-request-w-specific-headers)
+- [Save the cURL result to a file](#save-the-result-of-a-curl-command)
+
 ## Requests
 
 #### GET
@@ -24,6 +38,24 @@ curl -X DELETE http://localhost:3000
 ```
 
 ----------
+
+## Testing 301 Redirects
+```bash
+curl -I https://info.aladvantage.com
+
+#HTTP/2 301 
+#server: nginx
+#date: Tue, 01 Oct 2019 04:46:07 GMT
+#content-type: text/html; charset=iso-8859-1
+#location: https://www.aladvantage.com/  <== "new location"
+#cache-control: max-age=15552000
+#expires: Sun, 29 Mar 2020 04:46:07 GMT
+#host-header: b7440e60b07ee7b8044761568fab26e8
+```
+
+
+----------
+
 
 ## Sending Data
 
