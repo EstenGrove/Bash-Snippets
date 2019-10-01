@@ -10,7 +10,7 @@
   - [DELETE](#delete)
 - [Testing 301 Redirects](#testing-301-redirects)
 - [Sending Data](#sending-data)
-- [Setting Headers](#using-and-setting-headers)
+- [Setting Headers](#using--setting-headers)
   - [Return ONLY headers](#return-only-the-headers)
   - [Make request w/ specific headers](#make-request-w-specific-headers)
 - [Save the cURL result to a file](#save-the-result-of-a-curl-command)
