@@ -14,6 +14,7 @@
   - [Return ONLY headers](#return-only-the-headers)
   - [Make request w/ specific headers](#make-request-w-specific-headers)
 - [Save the cURL result to a file](#save-the-result-of-a-curl-command)
+- [File Uploads](#file-uploads)
 
 ## Requests
 
@@ -82,5 +83,19 @@ curl -H "X-Header: Value" http://localhost:3000
 ## Save the Result of a ```cURL``` Command
 ```bash
 curl -o MyFileToSaveTo.txt http://localhost:3000/api/users
+```
+
+-----------
+
+
+## File Uploads
+
+#### Syntax
+```bash
+curl -F 'data=@path/to/local/file' UPLOAD_ADDRESS
+
+# EXAMPLE USAGE
+
+curl -F 'my_img=@/users/EstenGrove/documents/my_img.png' https://mydomain.com/media
 ```
 
