@@ -13,6 +13,9 @@
 - [Batch Processing](#batch-processing)
 
 
+-----------
+
+
 ## Converting Images
 
 ```bash
@@ -24,6 +27,8 @@
 ```bash
 convert myimage.png myimage.jpg
 ```
+
+-----------
 
 
 ## Resizing Images
@@ -39,18 +44,22 @@ When resizing images, ImageMagick will try to maintain aspect ratio which can sl
 convert example.png -resize 200x100 example.png
 ```
 
-#### Convert Size and Force EXACT Dimenstions
+#### Convert Size and Force EXACT Dimensions
 
 ```bash
 convert <origin-img> -resize <dimensions>! <output-img>
 ```
 
+-----------
 
 ## Rotate Image
 
 ```bash
 convert example.jpg -rotate 90 example-rotated.jpg
 ```
+
+-----------
+
 
 ## Image Effects
 
@@ -68,5 +77,7 @@ convert <original-img> -charcoal 2 <output-img>
 ```bash
 convert <original-img> -implode 1 <output-img>
 ```
+
+-----------
 
 ## Batch Processing
