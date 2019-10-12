@@ -4,8 +4,13 @@
 ## Quick Access
 
 - [Converting Images](#converting-images)
+- [Resizing Images](#)
 - [Convert size and Force EXACT dimensions](#convert-size-and-force-exact-dimensions)
 - [Rotate Image](#rotate-image)
+- [Image Effects](#image-effects)
+  - [Charcoal Drawing Effect](#add-a-drawn-effect)
+  - [Imploded Swirl Effect](#add-an-imploded-effect)
+- [Batch Processing](#batch-processing)
 
 
 ## Converting Images
@@ -34,7 +39,7 @@ When resizing images, ImageMagick will try to maintain aspect ratio which can sl
 convert example.png -resize 200x100 example.png
 ```
 
-#### Conver Size and Force EXACT Dimenstions
+#### Convert Size and Force EXACT Dimenstions
 
 ```bash
 convert <origin-img> -resize <dimensions>! <output-img>
@@ -46,3 +51,22 @@ convert <origin-img> -resize <dimensions>! <output-img>
 ```bash
 convert example.jpg -rotate 90 example-rotated.jpg
 ```
+
+## Image Effects
+
+There's a series of image *distortion* effects.
+
+
+#### Add a "Drawn" Effect
+
+```bash
+convert <original-img> -charcoal 2 <output-img>
+```
+
+#### Add an "Imploded" Effect
+
+```bash
+convert <original-img> -implode 1 <output-img>
+```
+
+## Batch Processing
