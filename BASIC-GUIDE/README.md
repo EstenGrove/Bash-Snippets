@@ -354,6 +354,37 @@ select opt in $OPTIONS; do
 
 
 ## Reading User Input with ```READ```
+
+- Ask a question w/ ```prompt```, 
+- ```read``` user input, 
+- store user input in variable
+
+```bash 
+##### READ w/ PROMPT #####
+
+# Syntax
+read -p <string> <variable_that_stores_user_input>
+
+echo "$variable_that_stores_user_input"
+
+# Example
+read -p "Whats your name?" name
+
+echo "Hello $name. You are a bitch, ya know that right?"
+
+```
+
+#### Read Multiple Inputs
+
+```bash
+read -p "Add any 2 numbers " num1 num2
+
+sum=$((num1+num2))
+
+echo "$num1 + $num2 = $sum"
+
+```
+
 ```bash
 echo "Please, enter your firstname and lastname"
 read FN LN
