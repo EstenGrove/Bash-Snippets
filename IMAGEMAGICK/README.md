@@ -11,6 +11,7 @@
   - [Charcoal Drawing Effect](#add-a-drawn-effect)
   - [Imploded Swirl Effect](#add-an-imploded-effect)
 - [Batch Processing](#batch-processing)
+  - [Resize all images in a directory](#resize-all-images-in-a-directory)
 
 
 -----------
@@ -81,3 +82,10 @@ convert <original-img> -implode 1 <output-img>
 -----------
 
 ## Batch Processing
+
+
+#### Resize All Images in a Directory
+```bash
+# resize all images in a folder
+for i in *.jpg; do convert "$i" -resize 450x240 "$i_450x240"; done
+```
