@@ -6,6 +6,8 @@
 - [Converting Images](#converting-images)
 - [Resizing Images](#)
 - [Convert size and Force EXACT dimensions](#convert-size-and-force-exact-dimensions)
+- [Compress/Optimize Image](#compress-or-optimize-image)
+  - [Apply 25% Compression to Image](#apply-25-compression-to-image)
 - [Rotate Image](#rotate-image)
 - [Image Effects](#image-effects)
   - [Charcoal Drawing Effect](#add-a-drawn-effect)
@@ -78,6 +80,20 @@ convert <original-img> -charcoal 2 <output-img>
 ```bash
 convert <original-img> -implode 1 <output-img>
 ```
+
+-----------
+
+
+## Compress or Optimize Image
+
+#### Apply 25% Compression to Image
+- The following script will apply a 25% reduction-compression
+
+```bash
+convert <original-img> -strip -quality 75% <output-img>
+```
+
+
 
 -----------
 
