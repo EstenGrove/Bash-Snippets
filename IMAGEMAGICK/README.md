@@ -7,6 +7,7 @@
 - [Resizing Images](#)
 - [Convert size and Force EXACT dimensions](#convert-size-and-force-exact-dimensions)
 - [Compress/Optimize Image](#compress-or-optimize-image)
+  - [Max Amount of Compression](#apply-the-max-amount-of-compression-to-an-image)
   - [Apply 25% Compression to Image](#apply-25-compression-to-image)
 - [Rotate Image](#rotate-image)
 - [Image Effects](#image-effects)
@@ -93,6 +94,12 @@ convert <original-img> -implode 1 <output-img>
 convert <original-img> -strip -quality 75% <output-img>
 ```
 
+#### Apply the Max Amount of Compression to an Image
+This script will *actually* resize the image on-the-fly by 50% which will significantly reduce the size of the image.
+
+```bash
+convert input.jpg[50%x50%] -quality 70 output.jpg
+```
 
 
 -----------
