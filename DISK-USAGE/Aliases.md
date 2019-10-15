@@ -30,7 +30,7 @@ getsize ./Documents
 ---------
 
 ## Get The 5 Largest Files
-
+- Will output in MB
 ```bash
 glf(){
   du -a -h -m | sort -n -r | head -n 5
