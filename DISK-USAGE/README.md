@@ -1,5 +1,12 @@
 # Disk Usage
 
+## Get TOTAL Size of a Directory or File
+```bash
+du -ch AL-Advantage/ | grep total
+
+# 6.2G total
+```
+
 ## Get Disk Usage in Human Readable Form
 ```bash
 du -h
