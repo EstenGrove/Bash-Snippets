@@ -27,3 +27,19 @@ getsize(){
 getsize ./Documents
 ```
 
+---------
+
+## Get The 5 Largest Files
+
+```bash
+glf(){
+  du -a -h -m | sort -n -r | head -n 5
+}
+
+# OUTPUT:
+# 6335    .
+# 2066    ./BACKUPS-ALA
+# 2065    ./BACKUPS-ALA/CURRENT
+# 2049    ./BACKUPS-ALA/CURRENT/SITE-FILES/INFO-backup.zip
+# 2049    ./BACKUPS-ALA/CURRENT/SITE-FILES
+```
