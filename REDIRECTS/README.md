@@ -1,5 +1,5 @@
 # 301 & 302 Apache Redirects (```.htaccess```)
-
+[Helpful guide w/ syntax here](http://httpd.apache.org/docs/2.2/en/mod/mod_rewrite.html#rewritecond)
 
 ## Custom Regex for Redirects (ALA)
 
