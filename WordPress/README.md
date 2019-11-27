@@ -3,6 +3,14 @@
 
 ## Common Commands in ```WP-CLI```
 
+## Find and Replace for Link
+This script is run from the command line and will find all links/urls that are desired and replace them with a specific url.
+
+```bash
+# Find and replace 
+wp seach-replace https://olddomain.com https://www.newdomain.com
+```
+
 #### Handling Plugins from ```WP-CLI```
 ```bash
 # Install & activate plugin
