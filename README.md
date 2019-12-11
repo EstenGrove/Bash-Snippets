@@ -24,3 +24,16 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
   - [LOOPS](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#loops-for-while-until)
   - [READING USER INPUT](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#reading-user-input-with-read)
   - [VARIABLES](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#variables)
+
+
+-----------
+
+## Kill Git Bash
+When an error about child processing forking appears you have to kill the process for it.
+
+```bash
+taskkill /F /IM ssh.exe
+
+# Also run the below command if the process is present
+taskkill /F /IM ssh-pageant.exe
+```
