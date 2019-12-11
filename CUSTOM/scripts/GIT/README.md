@@ -37,6 +37,8 @@ cb () {
 # cb "features"
 ```
 
+-----------
+
 ### Git Diffing
 - check for differences between two different commit trees and install the needed dependencies IF changes are found.
 ```bash    
@@ -54,5 +56,13 @@ if git diff-tree --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet 'packa
 else
   echo "$(date): No changes found in package.json"
 fi
+```
+
+#### Print All Commmits That Changed a File
+This will find all changes for a specific file and print their commit logs.
+```bash
+git log --follow [file]
+
+# EXAMPLE USAGE: git log --follow src/App.js
 ```
 
