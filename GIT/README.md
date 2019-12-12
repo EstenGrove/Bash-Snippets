@@ -60,6 +60,14 @@ git push -u origin master
 
 
 # Working with Branches
+- [Create a branch](#create-a-branch)
+- [Track upstream branch](#track-upstream-branch)
+- [Get ONLY Remote branches](#get-only-remote-branches)
+- [Clone ONLY a specific branch from a git repo](#clone-only-a-specific-branch-from-a-repo)
+- [Merging][#merging)
+    - [Merge branches](#merge-branches)
+        - First change to the branch you want to *apply* changes *to*. Then merge the branch with changes into the current branch.
+    - [Apply changes on "master" to another branch](#push-changes-on-master-to-feature-branch)
 
 ### Create a Branch
 ```bash
@@ -87,7 +95,7 @@ git branch -r
 git checkout -
 ```
 
-## Clone ONLY a Specific Branch from a Repo
+### Clone ONLY a Specific Branch from a Repo
 ```bash
 git clone --single-branch --branch <branchname> <remote-repo>
 
@@ -136,6 +144,8 @@ git pull <upstream> <branch>
 # Example: git pull origin features
 ```
 
+## Merging
+
 ### Merge Branches
 First you need to change into the branch that you want to merge *into*. 
 - If you want to add the changes in a "features" branch to the "master" branch, you would first change to the "master" branch and merge "features" *into* the "master" branch.
@@ -146,6 +156,16 @@ git checkout master
 # then run merge of the branch you want to pull changes from
 git merge features
 ```
+
+### Push Changes On "master" to "feature" Branch
+- The following command(s) is for applying changes found on "master" to another branch like a "feature" branch.
+
+```bash
+git checkout feature
+git rebase master
+```
+
+
 
 ### Show Latest Branches
 Can be helpful when using BugIDs for branch names.
