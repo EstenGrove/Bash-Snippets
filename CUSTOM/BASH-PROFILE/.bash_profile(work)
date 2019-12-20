@@ -1,0 +1,187 @@
+# Formats the terminal prompt, shows: <user>@~/WorkingDirectory [git-branch]$ type command here...
+export PATH=$PATH:/Users/stevengore/bin
+
+git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\u@\[\033[32m\]\w\[\033[33m\] \$(git_branch)\[\033[00m\]\$ "
+
+
+
+# ALIASES
+
+# Navigating Folders
+alias P1='cd /Users/stevengore/Desktop/WebDevelopment/Projects'
+alias P2='cd /Users/stevengore/Documents/Projects2'
+alias Docs='cd /Users/stevengore/Documents'
+alias ALA='cd /Users/stevengore/Documents/AL-Advantage/ALAdvantageGit'
+alias DEV='cd /Users/stevengore/Documents/AL-Advantage/DEV'
+alias NEWDEV='cd /Users/stevengore/Documents/AL-Advantage/NewDevelopment'
+alias PLAY='cd /Users/stevengore/Documents/AL-Advantage/PLAYGROUND'
+alias LEARN='cd /Users/stevengore/Documents/LEARNING'
+alias REACT='cd /Users/stevengore/Documents/AL-Advantage/ALAdvantageGit/ALAApps/common/reusables/js/React'
+alias DESK='cd /Users/stevengore/Desktop'
+alias ALAD='cd /Users/stevengore/Desktop/ALA/DEV'
+
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+
+# HELPER ALIASES
+alias c='clear'
+alias ls='ls -1a'
+alias ld='ls -laG'
+
+
+# NETWORKING AND RESOURCE-RELATED ALIASES
+
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"        # flush dns cache
+
+alias myip='curl https://ipinfo.io/ip'                                               # get public IP
+
+alias netCons='lsof -i'                                                              # show all open TCP/IP sockets
+
+alias memHogs='top -l 1 -o rsize | head -20'                                         # Get the memory hogging processes (ie. most memory-intensive processes)
+
+alias openPorts='sudo lsof -i | grep LISTEN'                                         # Get all LISTENING ports
+
+alias showBlocked='sudo ipfw list'                                                   # Show all ipfw blocked/blacklisted IPs
+
+
+
+
+
+# Change/Edit the .bash_profile
+alias BASH='nano .bash_profile'
+
+
+
+######### FUNCTIONS #########
+
+
+# Git Add, Commit, Push to Specfic Branch ONLY
+# Checks for Empty string as args, if empty then just "git push", else "git push origin <arg>"
+
+acp ()
+{
+        if [[ -n "$2" ]]; then
+                git add -A; git commit; git push origin "$2"
+        else
+                git add -A; git commit; git push
+        fi
+}
+
+# Git Add, Commit, Push to Specific Branch ONLY
+acpb(){
+        if [[ -n "$2" ]]; then
+                git add -A; git commit; git push origin "$2"
+        else
+                git add -A; git commit; git push
+        fi
+}
+
+# Git Fetch, and Pull - get the latest
+gfp () {
+        git fetch; git pull
+}
+
+# Git: Change Branch
+cb (){
+        git checkout "$1";
+}
+
+#### Search Git Logs ####
+GS(){
+        git log --all --grep="$1"
+}
+
+######### DISK USAGE FUNCTIONS #########
+
+## Get the Total Disk Usage of Directory with a User Prompt and Nice Message!
+getsize(){
+        read -p "Which directory should I check the disk usage for? " dir
+        output="$(du -ch "$dir" | grep total)"
+        echo "The $dir directory is $output"
+
+}
+
+## Get the Total Disk Usage w/o a Message
+gettotal(){
+        du -ch "$1" | grep total
+}
+# Usage: gettotal "./Documents"
+
+
+# GENERATE A RANDOM STRING OF CHARACTERS WITH A CUSTOM LENGTH
+nwps(){
+        pwgen -s "$1" 1
+}
+
+alias gs='git status'
+alias glg='git log --graph'
+alias gls='git log --stat'
+alias glp='git log --pretty=format:"%h : %s" --graph'
+
+######### NPM SCRIPTS, ALIASES & FUNCTIONS ##########
+
+## Aliases ##
+
+# Install base React deps: node-sass react-router-dom date-fns@1.30.1 prop-types
+alias ins_deps='npm i node-sass react-router-dom date-fns@1.30.1 prop-types'
+
+
+# Get all project dependencies in use
+alias deps='npm ls --depth=0'
+
+# Get more info on deps: npm long-list more
+alias nlm='npm ll'
+
+
+
+# Tar.gz Compression Script
+zipit(){
+        tar -zcvf "$1" "$2"
+}
+
+
+#### SSH CONNECTIONS ####
+connect2(){
+        ssh -i ~/.ssh/sg_rsa aladvant@giow22.siteground.us -p 18765
+}
+
+
+###### DEV SCRIPTS #######
+
+create_react(){
+        # Create all folders
+        mkdir components sass css utils assets helpers;
+        mkdir components/containers;
+
+
+        # Create files
+        touch css/Main.module.scss;
+        touch sass/_{mixins,variables}.scss;
+        touch components/Main.js;
+        touch helpers/helpers.js;
+
+        touch components/containers/{ContainerLG,Column,Row,CardSM}.js;
+        touch css/{ContainerLG,Column,Row,CardSM}.module.scss;
+
+        # Rename files
+        mv App.css App.scss;
+
+  # Paste CSS reset into index.css
+  echo "*, *::after, *::before { box-sizing: border-box; margin: 0; padding: 0; }  html { font-size: 62.5%; }" >> index.css;
+
+        echo "@import './sass/mixins';@import './sass/variables';  .App { max-width: 100vw; height: 100vh; }" >> App.scss;
+
+        # Add code to various files
+        echo "import React from 'react'; import styles from '../css/Main.module.scss';  const Main = ({children}) => { return <div className={styles.Main}>{children}</div>}; export default Main;" >> components/Main.js;
+
+        echo " @import '../sass/variables'; @import '../sass/mixins';  .Main { @include fill_container; padding: 4rem 2rem; }" >> css/Main.module.scss;
+
+
+
+}
