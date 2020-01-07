@@ -37,3 +37,13 @@ taskkill /F /IM ssh.exe
 # Also run the below command if the process is present
 taskkill /F /IM ssh-pageant.exe
 ```
+
+
+------
+
+## Locating Files
+- Use ```find```
+- Use ```ls``` with ```| grep```
+- Use ```ls``` with wildcard: ```ls *[32]*```
+  - This will find all files with either a 3 or 2 in it.
+
