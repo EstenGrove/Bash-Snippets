@@ -1,6 +1,22 @@
 # Custom Git Scripts, Aliases and Commands
 - A collection of useful helpers to improve production and efficiency
 
+
+
+## Sync Remote Repo(GitHub) To Local (overwrite local)
+- If the local repo gits out of sync somehow or doesn't have the correct changes that are applied to the remote repo (sometimes you get duplicate files etc) then you can run the following command to reset everything to the current remote HEAD.
+- Be sure to specify the specific branch origin (ie origin/dev or origin/master) to reset to the desired branch.
+
+```bash
+
+# Reset and sync local repository with remote branch
+
+# The command: Remember to replace origin and master with the remote and branch that you want to synchronize with.
+
+git fetch origin && git reset --hard origin/master && git clean -f -d
+```
+
+
 ### Git Add, Commit and Push Script
 - NOTE: to change the branch that you're pushing to it's best to create a separate alias. ALSO, may need to source???
 ```bash
