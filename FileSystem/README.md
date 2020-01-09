@@ -16,6 +16,9 @@ mv test.txt{,.old}  # test.txt.old
 
 # rename it back to test.txt
 mv test.txt{.old,}  # test.txt
+
+# rename all file extension
+rename 's/.old$/.new/' *.old
 ```
 
 ## Copying Files
