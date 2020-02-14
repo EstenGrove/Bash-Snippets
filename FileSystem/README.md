@@ -9,6 +9,15 @@
 - [SORT](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/SORT)
 - [WORD-COUNT(wc)](https://github.com/EstenGrove/Bash-Snippets/tree/master/FileSystem/WORD-COUNT(wc))
 
+
+## Create Several Identical Directories In Multiple Folders at Once
+
+```bash
+# the following will create "components", "css", "assets", "deps", "__tests__" directories inside every direction in the current location.
+for dir in */; do mkdir "$dir"/{components,css,assets,deps,__tests__};done
+```
+
+
 ## Renaming Files
 ```bash
 # rename the file test.txt => test.txt.old
