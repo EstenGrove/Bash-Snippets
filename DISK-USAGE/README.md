@@ -4,7 +4,7 @@
 Recursively runs through every directory and removes the node_modules folders.
 
 <details>
-  <summary>Clean Up "node_modules" Folders (MAC|Windows)</summary>
+  <summary><h3>Clean Up "node_modules" Folders (MAC|Windows)</h4></summary>
 
 **MAC**
 
