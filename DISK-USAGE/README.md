@@ -14,8 +14,11 @@ Recursively runs through every directory and removes the node_modules folders.
 # First List ALL Folders that contain "node_modules"
 find . -name "node_modules" -type d -prune -print | xargs du -chs
 
+# Find ALL "node_modules" folders that HAVE NOT been touched for 30 days
+find . -name "node_modules" -type d -prune -print -mtime +30 | xargs du -chs
 
-# Delete every "node_modules" folder recursively
+
+##### DELETE EVERY "node_modules" FOLDER #####
 find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 ```
 
