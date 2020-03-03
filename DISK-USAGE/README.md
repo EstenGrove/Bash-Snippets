@@ -1,5 +1,33 @@
 # Disk Usage
 
+## Clean Up ```node_modules``` Folder Recursively
+Recursively runs through every directory and removes the node_modules folders.
+
+<details>
+  <summary>Clean Up "node_modules" Folders (MAC|Windows)</summary>
+
+**MAC**
+
+```bash
+# First List ALL Folders that contain "node_modules"
+find . -name "node_modules" -type d -prune -print | xargs du -chs
+
+
+# Delete every "node_modules" folder recursively
+find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+```
+
+**Windows**
+
+```bash
+# Removes/Deletes ALL "node_modules" 
+FOR /d /r . %d in (node_modules) DO @IF EXIST "%d" rm -rf "%d"
+```
+
+</details>
+
+---
+
 ## Get TOTAL Size of a Directory or File
 ```bash
 du -ch AL-Advantage/ | grep total
