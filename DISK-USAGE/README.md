@@ -24,6 +24,12 @@ find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 FOR /d /r . %d in (node_modules) DO @IF EXIST "%d" rm -rf "%d"
 ```
 
+**PowerShell**
+
+```powershell
+Get-ChildItem -Path "." -Include "node_modules" -Recurse -Directory | Remove-Item -Recurse -Force
+```
+
 </details>
 
 ---
