@@ -20,6 +20,9 @@ find . -name "node_modules" -type d -prune -print -mtime +30 | xargs du -chs
 
 ##### DELETE EVERY "node_modules" FOLDER #####
 find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+
+##### DELETE EVERY "node_modules" FOLDER EXCEPT THE LAST 30 DAYS #####
+find . -name "node_modules" -type d -prune -print -mtime +30 | xargs du -chs
 ```
 
 **Windows**
