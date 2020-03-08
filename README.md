@@ -28,6 +28,42 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 
 -----------
 
+## **Common File System Commands & Helpers**
+
+<details>
+  <summary>Common File System Commands</summary>
+  
+**Create Multiple Directories at Once (inside of nested directory)**
+
+```bash
+# this will create an "app" and "dashboard" folder inside of "view"
+mkdir views/{app,dashboard}
+```
+
+**Create a Folder and Its Nested Folders at Once**
+
+```bash
+# This will create the "views" directory if it doesn't exist, then create "app", "dashboard", and "pages" folders inside it.
+mkdir -p views/{app,dashboard,pages}
+```
+
+**Create Several Levels Of Nested Folders at Once**
+
+```bash
+mkdir -p views/{dashboard/{daily,weekly},app,global}
+
+## Result: This creates "views" with "dashboard", "global" and "app" inside. Then "daily", "weekly" inside of "dashboard"
+## views > dashboard, app, global
+#### dashboard > daily, weekly
+```
+
+</details>
+
+
+
+
+-----------
+
 ## Kill Git Bash
 When an error about child processing forking appears you have to kill the process for it.
 
