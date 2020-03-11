@@ -75,6 +75,17 @@ du -a <directory|blank> | sort -r -n | head -n 20
 du -h <directory|blank> | sort -r -n | head -n 20
 ```
 
+## Get the 5 Largest Directories
+Doesn't return subdirectories.
+
+```bash
+du -hs * | sort -rh | head -5
+```
+
+```bash
+find -type f -exec du -Sh {} + | sort -rh | head -n 5
+```
+
 ## Get the Disk Usage for a Certain "Depth" of Directories
 - Only go so deep thru the directory tree.
 - This will go 5 levels deep and sort the results by largest file/directory to smalles
