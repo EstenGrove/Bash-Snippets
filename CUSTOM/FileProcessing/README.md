@@ -1,5 +1,7 @@
 # Converting & Processing Files (ie images, pdf's etc.)
+
 A collection of bash scripts for processing and converting files, either compression, optimization, converting images, and many file types including text files.
+
 ---
 
 ## **Convert ALL Images In a Folder**
