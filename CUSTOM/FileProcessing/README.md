@@ -4,6 +4,12 @@ A collection of bash scripts for processing and converting files, either compres
 
 ---
 
+# **Quick Access**
+- [Convert ALL images in a folder](#convert-all-images-in-a-folder)
+- [Convert Image to WebP Format](#convert--compress-an-image-to-webp-format)
+
+---
+
 ## **Convert ALL Images In a Folder**
 The following script will convert *all* ```.jpg```'s in a folder to ```.pdf```'s.
 
