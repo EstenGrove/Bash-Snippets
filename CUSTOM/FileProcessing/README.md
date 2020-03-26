@@ -36,6 +36,9 @@ done
 ## **Convert & Compress an Image to WebP Format**
 The following script will convert an image to webp format and optimize it via lossless compression.
 
+**Helpful Resource for WebP Conversions and Usage**
+[Josh Comeau's WebP Resource](https://joshwcomeau.com/performance/embracing-modern-image-formats/)
+
 <details>
   <summary>Convert & Compress an Image to WebP Format</summary>
   
