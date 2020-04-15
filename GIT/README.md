@@ -1,6 +1,12 @@
 # Git Commands, Snippets and Descriptions
 For a quick set of guides and glossaries: ``` git help -g ```
 
+## **Quick Access**
+
+- Viewing Changes
+    - [Viewing Staged/Unstaged Changes](#viewing-staged--unstaged-changes-before-committing)
+    - [Viewing Staged ONLY (ie current commit)(#viewing-current-commit-changes)
+
 
 ## Create "Feature" Branch & Clone Master Into It
 The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
@@ -13,6 +19,16 @@ git push origin feature
 
 # then list all current branches
 git branch -a
+```
+
+## Viewing "Staged" & "Unstaged" Changes *Before* Committing
+
+```javascript
+# show actual line changes
+git diff HEAD
+
+# show ONLY filenames
+git diff --name-only HEAD
 ```
 
 
