@@ -1,6 +1,22 @@
 # Git Commands, Snippets and Descriptions
 For a quick set of guides and glossaries: ``` git help -g ```
 
+
+## Create "Feature" Branch & Clone Master Into It
+The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
+
+```bash
+git checkout -b feature
+
+# then push to remote (add -u for remote tracking)
+git push origin feature
+
+# then list all current branches
+git branch -a
+```
+
+
+
 ## Config & Setup
 
 ### Check for "Admin Sesssion" (ie 'Run as Administrator')
