@@ -3,52 +3,19 @@ For a quick set of guides and glossaries: ``` git help -g ```
 
 ## **Quick Access**
 
+- [Working With Branches](#working-with-branches)
+    - [Create a "feature" branch](#create-a-feature-branch)
 - [Common Aliases, Scripts](#common-aliases-scripts)
     - [Aliases](#aliases)
     - [Scripts](#scripts)
-- Viewing Changes
+- [Viewing Changes](#viewing-changes)
     - [Viewing Staged/Unstaged Changes](#viewing-staged--unstaged-changes-before-committing)
     - [Viewing Staged ONLY (ie current commit)](#viewing-current-commit-changes)
-
-
-## Create "Feature" Branch & Clone Master Into It
-The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
-
-```bash
-git checkout -b feature
-
-# then push to remote (add -u for remote tracking)
-git push origin feature
-
-# then list all current branches
-git branch -a
-```
-
-## Viewing "Staged" & "Unstaged" Changes *Before* Committing
-
-```javascript
-# show actual line changes
-git diff HEAD
-
-# show ONLY filenames
-git diff --name-only HEAD
-```
+- [Fixing changes](#fixing-changes-deleting-reverting-)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-## Common Aliases, Scripts
-
-```bash
-#
-```
-
-
-
-
-
-------------------------------------------------------------------------------------------------------------------------
-
-# Working with Branches
+## Working with Branches
 - [Create a branch](#create-a-branch)
 - [Track upstream branch](#track-upstream-branch)
 - [Get ONLY Remote branches](#get-only-remote-branches)
@@ -57,6 +24,7 @@ git diff --name-only HEAD
     - [Merge branches](#merge-branches)
         - First change to the branch you want to *apply* changes *to*. Then merge the branch with changes into the current branch.
     - [Apply changes on "master" to another branch](#push-changes-on-master-to-feature-branch)
+
 
 ### Create a Branch
 ```bash
@@ -204,8 +172,31 @@ git stash save "Some comment here..."
 
 ------------------------------------------------------------------------------------------------------------------------
 
+## Viewing Changes
 
-# Working with Changes & Statuses
+
+## Create "Feature" Branch & Clone Master Into It
+The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
+
+```bash
+git checkout -b feature
+
+# then push to remote (add -u for remote tracking)
+git push origin feature
+
+# then list all current branches
+git branch -a
+```
+
+## Viewing "Staged" & "Unstaged" Changes *Before* Committing
+
+```javascript
+# show actual line changes
+git diff HEAD
+
+# show ONLY filenames
+git diff --name-only HEAD
+```
 
 ### Check What Files Were Changed/Modified in a Commit
 -First you need to commit ID
@@ -312,8 +303,25 @@ git whatchanged --since='2 weeks ago'
 git revert <commit-ish>
 ```
 
+------------------------------------------------------------------------------------------------------------------------
+
+## Common Aliases, Scripts
+
+```bash
+#
+```
+
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------
+
+
+
+# Fixing Changes: Deleting, Reverting, Discarding, Stashing 
+
+
 
 # Fixing Changes, Branches and Other
 - ```git reset```, ```git revert```
