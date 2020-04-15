@@ -16,7 +16,8 @@ For a quick set of guides and glossaries: ``` git help -g ```
     - [Discard Changes](#discard-changes)
 
 
-[TOP](git-commands-snippets-and-descriptions)
+[TOP](#git-commands-snippets-and-descriptions)
+[BOTTOM](#bottom)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -175,7 +176,7 @@ git stash
 git stash save "Some comment here..."
 ```
 
-[TOP](git-commands-snippets-and-descriptions)
+[TOP](#git-commands-snippets-and-descriptions)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -310,7 +311,7 @@ git whatchanged --since='2 weeks ago'
 git revert <commit-ish>
 ```
 
-[TOP](git-commands-snippets-and-descriptions)
+[TOP](#git-commands-snippets-and-descriptions)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -322,7 +323,7 @@ git revert <commit-ish>
 
 
 
-[TOP](git-commands-snippets-and-descriptions)
+[TOP](#git-commands-snippets-and-descriptions)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -450,4 +451,7 @@ git rebase -i features
 # the above will destructively merge changes from features into master
 ```
 
-[TOP](git-commands-snippets-and-descriptions)
+[TOP](#git-commands-snippets-and-descriptions)
+
+## Bottom
+
