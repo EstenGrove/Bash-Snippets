@@ -11,7 +11,9 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Viewing Changes](#viewing-changes)
     - [Viewing Staged/Unstaged Changes](#viewing-staged--unstaged-changes-before-committing)
     - [Viewing Staged ONLY (ie current commit)](#viewing-current-commit-changes)
-- [Fixing changes](#fixing-changes-deleting-reverting-)
+- [Fixing changes](#fixing-changes-deleting-reverting-discarding-stashing)
+    - [Git Reset](#git-reset)
+    - [Discard Changes](#discard-changes)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -321,9 +323,7 @@ git revert <commit-ish>
 
 # Fixing Changes: Deleting, Reverting, Discarding, Stashing 
 
-
-
-# Fixing Changes, Branches and Other
+#### **Git Reset, Git Revert Etc**
 - ```git reset```, ```git revert```
   - ```git revert``` can ONLY be used at the commit level.
   - ```git reset``` can be used on commits AND individual files.
