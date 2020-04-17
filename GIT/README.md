@@ -3,8 +3,9 @@ For a quick set of guides and glossaries: ``` git help -g ```
 
 ## **Quick Access**
 
-- [Working With Branches](#working-with-branches)
-    - [Create a "feature" branch](#create-a-feature-branch)
+
+- [Branches: Creating, Merging Etc.](#working-with-branches)
+    - [Create a "feature" branch](#create-feature-branch--clone-master-into-it)
 - [Common Aliases, Scripts](#common-aliases-scripts)
     - [Aliases](#aliases)
     - [Scripts](#scripts)
