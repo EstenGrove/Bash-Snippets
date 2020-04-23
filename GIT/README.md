@@ -6,6 +6,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 
 - [Branches: Creating, Merging Etc.](#working-with-branches)
     - [Create a "feature" branch](#create-feature-branch--clone-master-into-it)
+    - [Compare Differences Between Branches](#compare-differences-between-branches)
 - [Common Aliases, Scripts](#common-aliases-scripts)
     - [Aliases](#aliases)
     - [Scripts](#scripts)
@@ -15,6 +16,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Fixing changes](#fixing-changes-deleting-reverting-discarding-stashing)
     - [Git Reset](#git-reset)
     - [Discard Changes](#discard-changes)
+- [Fixing Broken Refs](#fixing-broken-refs)
 
 
 [TOP](#git-commands-snippets-and-descriptions)
@@ -175,6 +177,15 @@ git stash
 # Also can leave a comment for discerning between "stashes"
 
 git stash save "Some comment here..."
+```
+
+### Compare Differences Between Branches
+
+```bash
+git diff branch1..branch2
+
+# EXAMPLE USAGE:
+git diff master..feature_adlschedule
 ```
 
 [TOP](#git-commands-snippets-and-descriptions)
@@ -455,4 +466,34 @@ git rebase -i features
 [TOP](#git-commands-snippets-and-descriptions)
 
 ## Bottom
+
+---
+
+## Fixing Broken Refs
+Sometimes a branch's ```ref``` or ```HEAD``` get's "broken" and it no longer able to be accessed, read from, or updated.
+
+**Common Broken Ref Error Message**
+
+```bash
+# sometimes this is the message
+warning: ignoring ref with broken name refs/heads/js 2
+
+# or this
+fatal: missing object 69b76b88831327819fd7be5f63fa048a3e8d21e1 for refs/heads/react
+```
+
+**To solve this:**
+
+```bash
+# 1st run the following to check the branches in a repo 
+git branch -a
+
+# 2nd run the following, IF...IF there's an issue with one of the ref
+git update-ref -d <path-to-branch-ref>
+
+# EXAMPLE USAGE:
+git update-ref -d 'refs/remotes/origin/react'
+```
+
+
 
