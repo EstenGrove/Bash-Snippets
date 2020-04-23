@@ -7,6 +7,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Branches: Creating, Merging Etc.](#working-with-branches)
     - [Create a "feature" branch](#create-feature-branch--clone-master-into-it)
     - [Compare Differences Between Branches](#compare-differences-between-branches)
+        - Compares the `HEAD` of both branches being diffed.
 - [Common Aliases, Scripts](#common-aliases-scripts)
     - [Aliases](#aliases)
     - [Scripts](#scripts)
