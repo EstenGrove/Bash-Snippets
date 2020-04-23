@@ -180,12 +180,23 @@ git stash save "Some comment here..."
 ```
 
 ### Compare Differences Between Branches
+This will compare the tip of both branches (ie ```HEAD```. It shows ALL changes that exist in "branch2" that DO NOT exist in "branch1". This is perfect when working on a "feature" branch and checking master before a committing changes.
 
 ```bash
 git diff branch1..branch2
 
 # EXAMPLE USAGE:
 git diff master..feature_adlschedule
+```
+
+**Compare Branches** 
+You can also use triple dot syntax (ie ```git diff branch1...branch2```). This will compare the tip of the right("branch2") branch (ie ```HEAD```) with the common ancestor of the left("branch1") branch.
+
+```bash
+# This ONLY compares the tip of "branch2" with the 1st common ancestor in "branch1"
+# YOU USUALLY WANT TO USE "double-dot" syntax: git diff branch1..branch2
+
+git diff branch1...branch2
 ```
 
 [TOP](#git-commands-snippets-and-descriptions)
