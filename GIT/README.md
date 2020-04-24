@@ -23,6 +23,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Branch Maintenance](#branch-maintenance)
   - [Prune OLD Branches](#pruning-branches)
 - [Fixing Broken Refs](#fixing-broken-refs)
+- [Searching Log History](#searching-git-for-keyword)
 
 
 
@@ -36,7 +37,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Track upstream branch](#track-upstream-branch)
 - [Get ONLY Remote branches](#get-only-remote-branches)
 - [Clone ONLY a specific branch from a git repo](#clone-only-a-specific-branch-from-a-repo)
-- [Merging][#merging)
+- [Merging](#merging)
     - [Merge branches](#merge-branches)
         - First change to the branch you want to *apply* changes *to*. Then merge the branch with changes into the current branch.
     - [Apply changes on "master" to another branch](#push-changes-on-master-to-feature-branch)
@@ -593,6 +594,13 @@ Will search commits for a keyword and display any matching commits
 git log -S <keyword>
 
 # Example: git log -S puppy
+```
+
+#### Get Commit SHA
+The following will show a "brief" oneliner for each commit w/ the SHA hash.
+
+```bash
+git log --oneline --graph
 ```
 
 </details>
