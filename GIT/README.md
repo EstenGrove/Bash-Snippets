@@ -1,6 +1,8 @@
 # Git Commands, Snippets and Descriptions
 For a quick set of guides and glossaries: ``` git help -g ```
 
+------------------------------------------------------------------------------------------------------------------------
+
 ## **Quick Access**
 
 
@@ -17,6 +19,9 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Fixing changes](#fixing-changes-deleting-reverting-discarding-stashing)
     - [Git Reset](#git-reset)
     - [Discard Changes](#discard-changes)
+- [Rebase, Revert](#git-rebase)
+- [Branch Maintenance](#branch-maintenance)
+  - [Prune OLD Branches](#pruning-branches)
 - [Fixing Broken Refs](#fixing-broken-refs)
 
 
@@ -34,6 +39,12 @@ For a quick set of guides and glossaries: ``` git help -g ```
     - [Merge branches](#merge-branches)
         - First change to the branch you want to *apply* changes *to*. Then merge the branch with changes into the current branch.
     - [Apply changes on "master" to another branch](#push-changes-on-master-to-feature-branch)
+    
+    
+------------------------------------------------------------------------------------------------------------------------
+
+
+## Branches
 
 <details>
     <summary>Branches</summary>
@@ -149,7 +160,6 @@ git rebase master
 ```
 
 
-
 ### Show Latest Branches
 Can be helpful when using BugIDs for branch names.
 - The following will loop all your latest branches and display them with their names and most recent commits
@@ -198,7 +208,9 @@ git stash save "Some comment here..."
 
 </details>
 
----
+[TOP](#git-commands-snippets-and-descriptions)
+
+------------------------------------------------------------------------------------------------------------------------
 
 ## Git Diff(ing)
 
@@ -425,6 +437,33 @@ GS(){
 
 ------------------------------------------------------------------------------------------------------------------------
 
+## Branch Maintenance
+
+<details>
+  <summary>Pruning Branches</summary>
+  
+### Pruning OLD Branches
+Remove local branches that have been removed from your remote (ie GitHub, or other). ```git prune``` does NOT work on branches with an existing reference(ie ref). [Great explaination here](https://stackoverflow.com/questions/20106712/what-are-the-differences-between-git-remote-prune-git-prune-git-fetch-prune)
+
+##### **Types of Pruning**
+
+
+```bash
+# NOTE: before running try a dry-run
+git remote prune origin --dry-run
+
+# SYNTAX: 
+git remote prune <branch>
+
+git remote update --prune
+```
+  
+  
+</details>
+
+
+------------------------------------------------------------------------------------------------------------------------
+
 
 
 # Fixing Changes: Deleting, Reverting, Discarding, Stashing 
@@ -477,6 +516,16 @@ git reset --soft HEAD@{1}
 git reset --hard HEAD <commit-ID>
 
 # example: git reset --hard HEAD f1d2325
+```
+
+### Deleting a Branch
+
+```bash
+# For "unmerged" branches
+git branch -D <branch-to-delete>
+
+# For "merged" branches
+git branch -d <branch-to-delete>
 ```
 
 ### Uncommit Everything, But Still Save the Changes (Soft-Reset)
