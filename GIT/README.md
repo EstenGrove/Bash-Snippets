@@ -10,6 +10,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
     - [Create a "feature" branch](#branches)
     - [Compare Differences Between Branches](#compare-differences-between-branches)
         - Compares the `HEAD` of both branches being diffed.
+    - [Git Diff](#git-diffing)
 - [Common Aliases, Scripts](#common-aliases-scripts)
     - [Aliases](#aliases)
     - [Scripts](#scripts)
@@ -22,8 +23,10 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Rebase, Revert](#git-rebase)
 - [Branch Maintenance](#branch-maintenance)
   - [Prune OLD Branches](#pruning-branches)
+- [Common Aliases, Scripts](#common-aliases-scripts)
 - [Fixing Broken Refs](#fixing-broken-refs)
-- [Searching Log History](#searching-git-for-keyword)
+- [Searching Commits for Keyword](#search-commit-history--log)
+
 
 
 
