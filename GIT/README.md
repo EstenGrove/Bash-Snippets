@@ -25,6 +25,7 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Fixing Broken Refs](#fixing-broken-refs)
 
 
+
 [TOP](#git-commands-snippets-and-descriptions)
 [BOTTOM](#bottom)
 
