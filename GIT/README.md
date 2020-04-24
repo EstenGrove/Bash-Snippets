@@ -180,6 +180,10 @@ git stash
 git stash save "Some comment here..."
 ```
 
+---
+
+## Git Diff(ing)
+
 ### Compare Differences Between Branches
 This will compare the tip of both branches (ie ```HEAD```. It shows ALL changes that exist in "branch2" that DO NOT exist in "branch1". This is perfect when working on a "feature" branch and checking master before a committing changes.
 
@@ -199,6 +203,11 @@ You can also use triple dot syntax (ie ```git diff branch1...branch2```). This w
 
 git diff branch1...branch2
 ```
+
+#### **Visual Examples**
+
+![Git-Diff](https://user-images.githubusercontent.com/41505038/80240465-b7d7d800-8616-11ea-8d2c-0c48e58ef4a2.png)
+
 
 [TOP](#git-commands-snippets-and-descriptions)
 
