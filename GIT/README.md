@@ -35,7 +35,23 @@ For a quick set of guides and glossaries: ``` git help -g ```
         - First change to the branch you want to *apply* changes *to*. Then merge the branch with changes into the current branch.
     - [Apply changes on "master" to another branch](#push-changes-on-master-to-feature-branch)
 
+<details>
+    <summary>Branches</summary>
+    
+## Create "Feature" Branch & Clone Master Into It
+The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
 
+```bash
+git checkout -b feature
+
+# then push to remote (add -u for remote tracking)
+git push origin feature
+
+# then list all current branches
+git branch -a
+```
+
+    
 ### Create a Branch
 ```bash
 # the following will create a branch named features
@@ -180,9 +196,14 @@ git stash
 git stash save "Some comment here..."
 ```
 
+</details>
+
 ---
 
 ## Git Diff(ing)
+
+<details>
+    <summary>Comparing Branches</summary>
 
 ### Compare Differences Between Branches
 This will compare the tip of both branches (ie ```HEAD```. It shows ALL changes that exist in "branch2" that DO NOT exist in "branch1". This is perfect when working on a "feature" branch and checking master before a committing changes.
@@ -209,25 +230,17 @@ git diff branch1...branch2
 ![Git-Diff](https://user-images.githubusercontent.com/41505038/80240465-b7d7d800-8616-11ea-8d2c-0c48e58ef4a2.png)
 
 
+</details>
+
+
 [TOP](#git-commands-snippets-and-descriptions)
 
 ------------------------------------------------------------------------------------------------------------------------
 
 ## Viewing Changes
 
-
-## Create "Feature" Branch & Clone Master Into It
-The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
-
-```bash
-git checkout -b feature
-
-# then push to remote (add -u for remote tracking)
-git push origin feature
-
-# then list all current branches
-git branch -a
-```
+<details>
+    <summary>Viewing Changes (staged/unstaged)</summary>
 
 ## Viewing "Staged" & "Unstaged" Changes *Before* Committing
 
@@ -344,16 +357,68 @@ git whatchanged --since='2 weeks ago'
 git revert <commit-ish>
 ```
 
+</details>
+
 [TOP](#git-commands-snippets-and-descriptions)
 
 ------------------------------------------------------------------------------------------------------------------------
 
 ## Common Aliases, Scripts
 
+<details>
+    <summary>Common Aliases, Scripts, Commands Etc</summary>
+
 ```bash
-#
+#########################################################################
+############### GIT ALIASES, FUNCTIONS, HELPERS & SCRIPTS ###############
+#########################################################################
+
+alias gs='git status'
+alias glg='git log --graph'
+alias gls='git log --stat'
+alias glp='git log --pretty=format:"%h : %s" --graph'
+alias gr='grep --color -r' # usage gr 'some-string'
+alias gdh='git diff HEAD' # view staged/unstaged changes before commit
+alias gdn='git diff --name-only HEAD' # view staged/unstaged filenames ONLY, before commit
+
+# Git Add, Commit, Push to Specfic Branch ONLY
+# Checks for Empty string as args, if empty then just "git push", else "git push origin <arg>"
+
+acp ()
+{
+	if [[ -n "$2" ]]; then
+		git add .; git commit; git push origin "$2"
+	else
+		git add .; git commit; git push
+	fi
+}
+
+# Git Add, Commit, Push to Specific Branch ONLY
+acpb(){
+	if [[ -n "$2" ]]; then
+		git add .; git commit; git push origin "$2"
+	else
+		git add .; git commit; git push
+	fi
+}
+
+# Git Fetch, and Pull - get the latest
+gfp () {
+	git fetch; git pull
+}
+
+# Git: Change Branch
+cb (){
+	git checkout "$1";
+}
+
+#### Search Git Logs ####
+GS(){
+	git log --all --grep="$1"
+}
 ```
 
+</details>
 
 
 [TOP](#git-commands-snippets-and-descriptions)
@@ -363,6 +428,9 @@ git revert <commit-ish>
 
 
 # Fixing Changes: Deleting, Reverting, Discarding, Stashing 
+
+<details>
+    <summary>Fixing, Reverting, Deleting, Discarding and Stashing Changes</summary>
 
 #### **Git Reset, Git Revert Etc**
 - ```git reset```, ```git revert```
@@ -436,7 +504,6 @@ git stash pop
 git stash list
 ```
 
-###
 
 ### Change/Rewrite Last Commit
 This command allows you to change: commit comments, comment content by adding or removing files
@@ -461,6 +528,14 @@ git checkout <branch>
 git cherr-pick <branch_name>
 ```
 
+</details>
+
+---
+
+## Search Commit History & Log
+
+<details>
+    <summary>Searching the History</summary>
 
 ### Search Commit History for Keyword
 Will search commits for a keyword and display any matching commits
@@ -470,9 +545,20 @@ git log -S <keyword>
 # Example: git log -S puppy
 ```
 
-### Git Rebase
+</details>
+
+---
+
+
+
+## Git Rebase
+
+<details>
+    <summary>Rebasing/Squashing, Re-flog, Reset</summary>
+
 Rebasing is the more DANGEROUS alternative to ```git merge```, but it's sometimes necessary. You can pick and choose which commits you want to squash, reword, edit or fixup.
 - rebasing works just like a destructive merge. You change to the branch that you wnat to apply changes *to*. Then rebase *into* it
+
 ```bash
 git rebase -i <branch>
 
@@ -484,16 +570,24 @@ git rebase -i features
 # the above will destructively merge changes from features into master
 ```
 
+</details>
+
 [TOP](#git-commands-snippets-and-descriptions)
 
 ## Bottom
 
 ---
 
+## Corrupted Branches & Refs
+
+<details>
+    <summary>Corrupted Branches, Refs, and Pointers</summary>
+
 ## Fixing Broken Refs
 Sometimes a branch's ```ref``` or ```HEAD``` get's "broken" and it no longer able to be accessed, read from, or updated.
 
 **Common Broken Ref Error Message**
+
 
 ```bash
 # sometimes this is the message
@@ -516,5 +610,7 @@ git update-ref -d <path-to-branch-ref>
 git update-ref -d 'refs/remotes/origin/react'
 ```
 
+</details>
 
 
+[TOP](#git-commands-snippets-and-descriptions)
