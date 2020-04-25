@@ -26,6 +26,8 @@ For a quick set of guides and glossaries: ``` git help -g ```
 - [Common Aliases, Scripts](#common-aliases-scripts)
 - [Fixing Broken Refs](#fixing-broken-refs)
 - [Searching Commits for Keyword](#search-commit-history--log)
+- [Viewing Commit History](#viewing-commit-history)
+
 
 
 
@@ -675,3 +677,20 @@ git update-ref -d 'refs/remotes/origin/react'
 
 
 [TOP](#git-commands-snippets-and-descriptions)
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+## Viewing Commit History
+
+<details>
+  <summary>Viewing Commit History & Changes Log</summary>
+  
+### **View "one-liner" of each Commit**
+
+```bash
+git log --oneline --graph
+```
+	
+	
+</details>
