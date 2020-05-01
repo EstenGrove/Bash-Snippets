@@ -12,10 +12,7 @@ tasklist
 # Name            PID         Session #          Mem Usage
 # Registry      17965          Services                 8k
 # node.exe      12708          Services            32,540k
-#
-#
-#
-#
+
 ```
 
 #### Kill a Process w/ Taskkill
@@ -85,6 +82,9 @@ vm_stat   options include: vm_stat -c 20
 ```bash
 # kill process by ID
 kill <process-ID>
+
+## Usage Example: kills ProcessID(PID) 8136
+kill -9 8136
 
 # kill all processes
 killall
