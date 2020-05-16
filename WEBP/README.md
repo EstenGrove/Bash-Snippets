@@ -1,4 +1,4 @@
-# ```WEBP` Image Processing from the Command Line
+# `WEBP` Image Processing from the Command Line
 
 
 ---
