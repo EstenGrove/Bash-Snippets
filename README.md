@@ -57,6 +57,19 @@ mkdir -p views/{dashboard/{daily,weekly},app,global}
 #### dashboard > daily, weekly
 ```
 
+**Move All Contents of Folder into Another Folder**
+
+```bash
+# Moves all files from 'src/css/reports' into 'src/css/views'
+mv src/css/reports/* src/css/views/
+```
+
+**Move All `.js` Files In a Folder**
+
+```bash
+mv src/components/*.js src/components/shared/
+```
+
 </details>
 
 
