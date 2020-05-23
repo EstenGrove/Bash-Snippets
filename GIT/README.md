@@ -484,8 +484,14 @@ git remote update --prune
   - ```git reset``` can be used on commits AND individual files.
 
 #### Git Reset
+[Here's a great resources for Git Reset & Git Revert](https://www.freecodecamp.org/news/the-ultimate-guide-to-git-reset-and-git-revert/)
+
+
 Fixes issues when you commit changes that are NOT complete. Resets your index to the latest commit.
 - It allows you to "point" a branch at another branch. For instance, if you want to point your master branch to a branch called "C" you could run: ```git reset C``` while the master branch is checked out.
+- You can reset in various ways:
+  - ```git reset HEAD <file-to-stage>```: this will reset a specific file to the branches's ```HEAD``` and removes pending changes. (ie staged/unstaged) changes.
+  - ```git reset <mode> <commit-hash>```: resets a branch to a specific commit ID(hash). The "mode" allows setting what gets kept and discarded. There are various "mode" options.
 
 ##### Discard Staged and Unstaged Changes Since the Last Commit
 ```bash
