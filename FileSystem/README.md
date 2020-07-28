@@ -17,6 +17,15 @@
 for dir in */; do mkdir "$dir"/{components,css,assets,deps,__tests__};done
 ```
 
+## Create File for Every Folder in the Working Directory
+
+```bash
+for dir in */; do touch "$dir"/<some-file-here>; done
+
+# Example: create a README.md" file for every directory
+for dir in */; do touch "$dir"/README.md; done
+```
+
 
 ## Renaming Files
 ```bash
