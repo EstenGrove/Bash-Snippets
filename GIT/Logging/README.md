@@ -34,20 +34,6 @@ git log --after "Tues Aug 13 2019"
 
 
 
-### Prepare a Message for Email Submission
-The ```git format-patch <commit_id>``` command will create a file with a history of any commit with the applied changes mapped out with "before" and "after" snapshots of the code and the changes. It's typically used to be sent via email as a changelog.
-```bash
-# get a log patch of where the branch is currently pointing (HEAD)
-
-git format-patch -1 HEAD
-
-# get a log patch of a specific commit
-
-git format-patch -1 <commit_id>
-
-```
-
-
 ---
 
 # Pretty Print or Short Logs
@@ -81,10 +67,13 @@ git shortlog
 
 ---
 
+---
+
 # Search Git Log
 
 
 ### Log Specific Lines from a File
+
 <details>
   <summary>Log Specific Lines</summary>
 
@@ -115,7 +104,27 @@ git log --all --grep="some string here"
 </details>
 
 
+---
 
+---
 
+# Formatting
 
+<details>
+  <summary>Prepare Message for Email</summary>
+
+### Prepare a Message for Email Submission
+The ```git format-patch <commit_id>``` command will create a file with a history of any commit with the applied changes mapped out with "before" and "after" snapshots of the code and the changes. It's typically used to be sent via email as a changelog.
+```bash
+# get a log patch of where the branch is currently pointing (HEAD)
+
+git format-patch -1 HEAD
+
+# get a log patch of a specific commit
+
+git format-patch -1 <commit_id>
+
+```
+
+</details>
 
