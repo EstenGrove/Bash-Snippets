@@ -38,7 +38,29 @@ git format-patch -1 <commit_id>
 
 --------
 
+# Specific Searches
+
+### Log Lines from a File
+- ```git log -u -L <start>,<end>:<path-to-file>```
+
+
+```bash
+# Syntax: git log -u -L <starting-line>,<ending-line>:<path-to-file>
+
+# Example:
+git log -u -L 133,250:src/components/shared/CustomDropdown.js
+```
+
+
 ### Search Git Log for a String (grep)
 ```
 git log --all --grep="some string here"
 ```
+
+
+
+
+
+
+
+
