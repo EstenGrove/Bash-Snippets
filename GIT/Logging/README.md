@@ -43,9 +43,32 @@ git format-patch -1 <commit_id>
 
 ```
 
---------
+
+---
+
+# Pretty Print or Short Logs
+
+
+### Print One-Line Commit Log
+
+<details>
+  <summary>Print One-Line Commit Message</summary>
+
+```bash
+git log --oneline --graph
+```
+
+</details>
+
+
+
+
+---
 
 # Search Git Log
+
+<details>
+  <summary>Log Specific Lines</summary>
 
 ### Log Specific Lines from a File
 - ```git log -u -L <start>,<end>:<path-to-file>```
@@ -58,13 +81,20 @@ git format-patch -1 <commit_id>
 git log -u -L 133,250:src/components/shared/CustomDropdown.js
 ```
 
+</details>
+
+
 
 ### Search Git Log for a String (grep)
+
+<details>
+  <summary>Search for a String</summary>
+  
 ```
 git log --all --grep="some string here"
 ```
 
-
+</details>
 
 
 
