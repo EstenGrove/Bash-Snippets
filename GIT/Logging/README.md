@@ -67,10 +67,11 @@ git log --oneline --graph
 
 # Search Git Log
 
+
+### Log Specific Lines from a File
 <details>
   <summary>Log Specific Lines</summary>
 
-### Log Specific Lines from a File
 - ```git log -u -L <start>,<end>:<path-to-file>```
 
 
@@ -85,7 +86,8 @@ git log -u -L 133,250:src/components/shared/CustomDropdown.js
 
 
 
-### Search Git Log for a String (grep)
+
+#### Search Git Log for a String (grep)
 
 <details>
   <summary>Search for a String</summary>
