@@ -12,10 +12,15 @@ Tips for formatting, printing and organizing git commit messages and log outputs
 
 ---
 
-## Logs by Date or Range
+# Logs by Date or Range
 
 
-### Git Log Before/After a Specific Date
+### Before/After a Specific Date
+
+<details>
+  <summary>Log details before or after a date</summary>
+
+
 ```bash
 # print all logs before Aug 13
 git log --before "Tues Aug 13 2019"
@@ -25,10 +30,9 @@ git log --before "Tues Aug 13 2019"
 git log --after "Tues Aug 13 2019"
 ```
 
-### Concise Printing of Git Log
-```bash
-git shortlog
-```
+</details>
+
+
 
 ### Prepare a Message for Email Submission
 The ```git format-patch <commit_id>``` command will create a file with a history of any commit with the applied changes mapped out with "before" and "after" snapshots of the code and the changes. It's typically used to be sent via email as a changelog.
@@ -61,6 +65,18 @@ git log --oneline --graph
 </details>
 
 
+### Short Log
+
+<details>
+  <summary>Concise Log Output</summary>
+
+
+
+```bash
+git shortlog
+```
+
+</details>
 
 
 ---
