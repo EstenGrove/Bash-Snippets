@@ -33,6 +33,67 @@ git log --after "Tues Aug 13 2019"
 </details>
 
 
+### Since a Specific Date
+
+<details>
+  <summary>Log details since a date</summary>
+  
+```bash
+git log --since="9/3/2020 08:00:00"
+```
+
+##### **Examples**
+
+###### **Today**
+NOTE: when requesting log for today ONLY, you MUST provide a timestamp in order to return anything.
+
+```bash
+# Syntax: git log --since="MM/DD/YYYY hh:mm:ss"
+
+# since Sept. 1, 2020 at 3:30 PM
+git log --since="9/1/2020 15:30"
+```
+
+###### **By Date**
+
+
+```bash
+# Syntax: git log --since="MM/DD/YYYY"
+
+# since Sept. 1, 2020 
+git log --since="9/1/2020"
+```
+
+
+###### **By Time (and date)**
+
+
+```bash
+# Syntax: git log --since="MM/DD/YYYY hh:mm:ss"
+
+# since Sept. 1, 2020 at 7:00 PM
+git log --since="9/1/2020 19:00:00"
+```
+  
+</details>
+
+
+### Log for a Date Range
+
+<details>
+  <summary>Log for a Date Range</summary>
+  
+```bash
+# Use 'since' & 'until'
+git log --since="8/29/2020" --until="9/3/2020"
+
+
+# Use 'after' & 'before'
+git log --after="8/31/2020" --before="9/2/2020"
+```
+  
+
+</details>
 
 ---
 
