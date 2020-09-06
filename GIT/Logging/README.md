@@ -2,7 +2,9 @@
 Tips for formatting, printing and organizing git commit messages and log outputs.
 
 ## Quick Access
-- [Search Logs](#search-git-log-for-a-string-grep)
+- [Search Logs](#search-git-log)
+  - [Log specific lines from file](#log-specific-lines-from-a-file)
+  - [Search for string in log](#search-git-log-for-a-string--grep)
 - [Print logs by date](#git-log-beforeafter-a-specific-date)
 - [Short Logs](#concise-printing-of-git-log)
 - [Prepare message for email submission](#prepare-a-message-for-email-submission)
@@ -38,9 +40,9 @@ git format-patch -1 <commit_id>
 
 --------
 
-# Specific Searches
+# Search Git Log
 
-### Log Lines from a File
+### Log Specific Lines from a File
 - ```git log -u -L <start>,<end>:<path-to-file>```
 
 
