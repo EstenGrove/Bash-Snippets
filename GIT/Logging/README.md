@@ -5,9 +5,14 @@ Tips for formatting, printing and organizing git commit messages and log outputs
 - [Search Logs](#search-git-log)
   - [Log specific lines from file](#log-specific-lines-from-a-file)
   - [Search for string in log](#search-git-log-for-a-string-grep)
-- [Print logs by date](#git-log-beforeafter-a-specific-date)
+- [Print logs by date or range](#logs-by-date-or-range)
 - [Pretty-Print/Short Logs](#concise-printing-of-git-log)
 - [Prepare message for email submission](#prepare-a-message-for-email-submission)
+
+
+---
+
+## Logs by Date or Range
 
 
 ### Git Log Before/After a Specific Date
