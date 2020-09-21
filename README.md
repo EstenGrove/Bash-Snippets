@@ -25,6 +25,12 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
   - [READING USER INPUT](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#reading-user-input-with-read)
   - [VARIABLES](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#variables)
 
+----------
+
+### Quick Access to Scripts
+
+- [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
+
 
 -----------
 
@@ -73,7 +79,26 @@ mv src/components/*.js src/components/shared/
 </details>
 
 
+-----------
 
+## Copy Files from Local Machine to Server
+
+<details>
+  <summary>Copying Files to a Server w/ `scp`</summary>
+
+**Steps:**
+1. Move to directory where desired files are located on your local machine
+2. Make note of SSH user credentials & IP address of the target server
+3. Run the below command to copy the files
+
+```bash
+scp -r <folder-to-copy> <ssh-user>@<target-server-ip>:/var/www/example.com/html
+
+## USAGE EXAMPLE ##
+scp -r ./build/* root@192.168.1.13:/var/www/mydomain.com/html
+```
+  
+</details>
 
 -----------
 
