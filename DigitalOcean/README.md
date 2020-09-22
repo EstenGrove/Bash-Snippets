@@ -59,7 +59,7 @@ sudo nginx -t
 NOTE: the `default` files are literally the default configs. It's best NOT to modify them, but rather clone them, then make changes to the cloned copy.
 
 - `/etc/nginx/sites-enabled/default`: handles which sites (ie domains) are enabled in nginx.
-- `/etc/nginx/sites-available/default`: handles which sites (ie domains) are publicly accessible in nginx.
+- `/etc/nginx/sites-available/default`: handles which sites (ie domains) are publicly accessible in nginx. Also used for reverse proxies.
 
   
   
