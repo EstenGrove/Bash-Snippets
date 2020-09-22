@@ -24,15 +24,10 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
   - [LOOPS](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#loops-for-while-until)
   - [READING USER INPUT](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#reading-user-input-with-read)
   - [VARIABLES](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#variables)
+- [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
 
 ----------
 
-### Quick Access to Scripts
-
-- [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
-
-
------------
 
 ## **Common File System Commands & Helpers**
 
