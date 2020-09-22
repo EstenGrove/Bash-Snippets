@@ -31,14 +31,14 @@ sudo service nginx restart
 
 
 ## Nginx Config
-Updating the Nginx Config 
 
 <details>
   <summary>Update the Nginx Config</summary>
   
 
 ```bash
-# do something here
+# Update which sites are publicly available
+nano /etc/nginx/sites-available/default
 ```
 
 **Test the Changes before Re-starting Nginx:**
