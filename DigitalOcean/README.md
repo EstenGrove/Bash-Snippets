@@ -23,6 +23,9 @@ This is usually required after before config or server-related changes take effe
 ```bash
 # Restart Nginx
 sudo service nginx restart
+
+# Alternate method to restart nginx
+nginx -s reload
 ```
 </details>
 
