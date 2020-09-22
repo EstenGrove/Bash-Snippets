@@ -4,10 +4,31 @@
 
 ## Quick Access
 
+- [Server Commands](#server-commands)
 - [Nginx Config](#nginx-config)
+- [File Permissions](#file-permissions)
 
 
 ---
+
+## Server Commands
+
+<details>
+  <summary>Server Commands (restart, shutdown etc)</summary>
+
+
+**Restart Nginx**
+This is usually required after before config or server-related changes take effect.
+
+```bash
+# Restart Nginx
+sudo service nginx restart
+```
+</details>
+
+
+---
+
 
 ## Nginx Config
 Updating the Nginx Config 
@@ -25,5 +46,41 @@ Updating the Nginx Config
 sudo nginx -t
 ```
   
+</details>
+
+---
+
+## File Permissions
+
+<details>
+  <summary>Updating File Permissions</summary>
+  
+```bash
+# 755 makes public to the user
+sudo chmod -R 755
+```
   
 </details>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
