@@ -34,6 +34,14 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 <details>
   <summary>Common File System Commands</summary>
   
+**Delete Files and/or Folders By RegEx**
+
+```bash
+# this deletes ALL files with '2.js' in the filename
+find . -type f -name *2.js* -delete
+```
+  
+  
 **Create Multiple Directories at Once (inside of nested directory)**
 
 ```bash
