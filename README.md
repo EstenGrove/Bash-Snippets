@@ -26,6 +26,11 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
   - [VARIABLES](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#variables)
 - [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
 
+
+### **Quick Access on This Page:**
+
+- [Working w/ Ports & Localhost](#work-with-ports-and-localhost)
+
 ----------
 
 
@@ -115,6 +120,56 @@ taskkill /F /IM ssh.exe
 taskkill /F /IM ssh-pageant.exe
 ```
 
+
+------
+
+## Working with Ports and Localhost
+
+<details>
+  <summary>Check a Port's Status</summary>
+  
+  
+```bash
+# Check if a port is open
+netstat -vanp tcp | grep <port>
+
+## Example: Checks for port 3000 (ie localhost:3000)
+netstat -vanp tcp | grep 3000
+
+# Alternate Method
+lsof -i tcp:<port>
+
+## Example: Checks for port 3000
+lsof -i tcp:3000
+```
+  
+</details>
+
+<details>
+  <summary>Get ALL Open Ports</summary<
+    
+```bash
+# Returns ALL ports that are 'listening'
+
+netstat -anvp tcp | awk 'NR<3 || /LISTEN/'
+```
+    
+</details>
+
+<details>
+  <summary>Kill an Open Port</summary>
+  
+```bash
+# First Get PID
+lsof -i tcp:3000
+
+kill -9 <pid>
+
+## Example:
+kill -9 546
+```
+  
+</details>
 
 ------
 
