@@ -150,8 +150,9 @@ lsof -i tcp:3000
   
 </details>
 
+
 <details>
-  <summary>Get ALL Open Ports</summary<
+  <summary>Get ALL Open Ports</summary>
     
 ```bash
 # Returns ALL ports that are 'listening'
