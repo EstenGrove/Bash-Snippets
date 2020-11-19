@@ -24,12 +24,17 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
   - [LOOPS](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#loops-for-while-until)
   - [READING USER INPUT](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#reading-user-input-with-read)
   - [VARIABLES](https://github.com/EstenGrove/Bash-Snippets/tree/master/BASIC-GUIDE#variables)
-- [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
+
 
 
 ### **Quick Access on This Page:**
 
+- [Copy Files from Local Machine to Server](#copy-files-from-local-machine-to-server) 
 - [Working With Ports & Localhost](#working-with-ports-and-localhost)
+- [Filesystem Commands](#common-file-system-commands--helpers)
+  - [Create Folder w/ Nested Folders](#create-a-folder-and-its-nested-folders-at-once)
+  - [Create Several Levels of Nested Folders](#create-several-levels-of-nested-folders-at-once)
+  - [Move Folder Contents to Another Folder](#move-all-contents-of-folder-into-another-folder)
 
 ----------
 
