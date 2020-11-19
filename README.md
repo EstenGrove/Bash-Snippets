@@ -29,7 +29,7 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 
 ### **Quick Access on This Page:**
 
-- [Working w/ Ports & Localhost](#work-with-ports-and-localhost)
+- [Working With Ports & Localhost](#working-with-ports-and-localhost)
 
 ----------
 
