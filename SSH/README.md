@@ -1,4 +1,14 @@
 # Setup SSH with or with Keys
+Various scripts, tutorials and descriptions regarding SSH keys.
+
+---
+
+## Handling Multiple SSH Keys with Multiple Hosts
+
+ [Great Resource!](https://gist.github.com/jexchan/2351996)
+
+
+---
 
 ### Generate SSH keys and Setup Alias for SSH
 ```bash
