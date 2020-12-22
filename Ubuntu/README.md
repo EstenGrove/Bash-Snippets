@@ -1,6 +1,15 @@
 # Ubuntu v18.04 Bionic Beaver
 
 
+## Install NodeJS - Specific Version(s)
+
+```bash
+# Get the source for v14.0
+curl -sL https://deb.nodesource.com/setup_14.0 | sudo -E bash -
+# Install via apt-get
+sudo apt-get install -y nodejs
+```
+
 ## Run Update on File-System
 
 ```bash
