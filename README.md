@@ -136,6 +136,9 @@ taskkill /F /IM ssh-pageant.exe
   
 ```bash
 # Check if a port is open
+nmap localhost:<port>
+
+# Check if a port is open
 netstat -vanp tcp | grep <port>
 
 ## Example: Checks for port 3000 (ie localhost:3000)
@@ -157,6 +160,9 @@ lsof -i tcp:3000
 ```bash
 # Returns ALL ports that are 'listening'
 
+nmap localhost
+
+# Alternate method
 netstat -anvp tcp | awk 'NR<3 || /LISTEN/'
 ```
     
