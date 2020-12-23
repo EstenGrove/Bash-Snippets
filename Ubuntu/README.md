@@ -27,7 +27,22 @@ grep -Po '^sudo.+:\K.*$' /etc/group
 
 ## Reboot 
 ```bash
+# Stop & restart
+sudo systemctl restart apache2
+
+# Reload
 sudo systemctl reboot
+
+# Stop 
+sudo systemctl stop apache2
+
+# Start
+sudo systemctl start apache2
+
+# Re-enable service on startup
+sudo systemctl enable apache2
+
+
 
 # Use Older Method: the "-r" flag tells Ubuntu to reboot
 sudo shutdown -r
