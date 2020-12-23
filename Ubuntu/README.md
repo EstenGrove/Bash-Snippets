@@ -25,6 +25,31 @@ grep -Po '^sudo.+:\K.*$' /etc/group
 #Output: administrator, newadmin
 ```
 
+
+---
+
+# Nginx Comment
+
+```bash
+# Stop server
+sudo systemctl stop nginx
+
+# Start server
+sudo systemctl start nginx
+
+# Stop, then start
+sudo systemctl restart nginx
+
+# Reload, used for config changes
+sudo systemctl reload nginx
+
+```
+
+
+---
+
+# Apache2 Commands
+
 ## Reboot 
 ```bash
 # Stop & restart
