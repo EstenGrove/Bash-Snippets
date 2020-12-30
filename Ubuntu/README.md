@@ -1,10 +1,18 @@
 # Ubuntu v18.04 Bionic Beaver
 
+**NOTE: When deploying React apps to an Ubuntu server it is required that NGINX be used as the reverse proxy to enable using React Router as the router instead of the default Apache router system.**
+
+
+---
+
 ## Quick Access
 
-- [Install NodeJS](#install-nodejs--specific-versions)
-- [Run Server Update(apt-get)](#run-update-on-file--system)
+- [Install NodeJS](#install-nodejs---specific-versions)
+- [Run Server Update(apt-get)](#run-update-on-file-system)
 - [Upgrade NodeJS Version](#upgrade-nodejs-version)
+- [NGINX Commands](#nginx-commands)
+- [Apache2 Commands](#apache2-commands)
+- [List ALL Super Users](#list-all-super-users)
 
 
 ---
@@ -36,7 +44,7 @@ grep -Po '^sudo.+:\K.*$' /etc/group
 
 ---
 
-# Nginx Comment
+# Nginx Commands
 
 ```bash
 # Stop server
