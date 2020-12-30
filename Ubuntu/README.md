@@ -1,5 +1,13 @@
 # Ubuntu v18.04 Bionic Beaver
 
+## Quick Access
+
+- [Install NodeJS](#install-nodejs--specific-versions)
+- [Run Server Update(apt-get)](#run-update-on-file--system)
+- [Upgrade NodeJS Version](#upgrade-nodejs-version)
+
+
+---
 
 ## Install NodeJS - Specific Version(s)
 
@@ -81,3 +89,44 @@ sudo shutdown -r +5
 ```bash
 sudo shutdown -c "Canceling scheduled reboot"
 ```
+
+
+---
+
+## Upgrade NodeJS Version
+
+**Available Node Versions (Debian/Ubuntu)**
+[Available Versions](https://github.com/nodesource/distributions)
+
+```bash
+# 1st: Download target version from source
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+
+# 2nd: Run the package setup script
+sudo bash nodesource_setup.sh
+
+# 3rd: Upgrade apt-get deps
+sudo apt-get upgrade
+
+# 4th: Install new NodeJS & NPM versions
+sudo apt-get -y install nodejs
+
+# Confirm desired versions
+node -v
+npm -v
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
