@@ -51,6 +51,11 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 find . -type f -name *2.js* -delete
 ```
   
+**Create a Folder Inside EVERY Folder in Current Directory**
+
+```bash
+for dir in */; do mkdir "$dir"/{NewDir1,NewDir2}; done
+```
   
 **Create Multiple Directories at Once (inside of nested directory)**
 
