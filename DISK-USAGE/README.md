@@ -1,5 +1,27 @@
 # Disk Usage
 
+---
+
+## Cleaning Up Mac's Disk Usage
+NOTE: If the disk is filling up due to the "System" there are some places to clear out that will help. 
+
+<details>
+  <summary>Clean Up "System" on Mac</summary>
+
+**Locations to Clean Up:**
+
+- Users/<some_user>/Library/Caches/CloudDocs
+- Users/<some_user>/Library/Caches/CloudKit
+- Users/<some_user>/Library/Application Support/CloudDocs
+- Users/<some_user>/Library/Application Support/CloudDocs/session
+- Library/Caches/*
+- System/Library/Caches/*
+
+</details>
+
+
+---
+
 ## Clean Up ```node_modules``` Folder Recursively
 Recursively runs through every directory and removes the node_modules folders.
 
