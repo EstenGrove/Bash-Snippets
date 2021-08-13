@@ -57,6 +57,44 @@ curl -I https://info.aladvantage.com
 
 ----------
 
+## Testing Cache-Control Headers & Cache Expiry(s)
+NOTE: IF 'Cache-Control' headers and/or 'Expiry' headers have been set they will appear in each of the responses below when executing each cURL command.
+
+```bash
+# Request some site's info (make note of the Etag value)
+curl -I https://portaltest.aladvantage.com
+
+## RESPONSE:
+HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Fri, 13 Aug 2021 22:29:37 GMT
+Content-Type: text/html
+Content-Length: 4567
+Last-Modified: Fri, 13 Aug 2021 13:51:31 GMT
+Connection: keep-alive
+ETag: "611678e3-11d7"
+Accept-Ranges: bytes
+
+```
+
+```bash
+# Re-request and add value from Etag below in quotes 
+curl -I -H 'If-None-Match: "611678e3-11d7"' https://portaltest.aladvantage.com
+
+## RESPONSE:
+HTTP/1.1 304 Not Modified
+Server: nginx/1.14.0 (Ubuntu)
+Date: Fri, 13 Aug 2021 22:30:26 GMT
+Last-Modified: Fri, 13 Aug 2021 13:51:31 GMT
+Connection: keep-alive
+ETag: "611678e3-11d7"
+
+```
+
+
+
+----------
+
 
 ## Sending Data
 
