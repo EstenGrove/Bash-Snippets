@@ -20,6 +20,70 @@
 
 -----------
 
+## Custom Alias Script for Converting 1 Image to Multiple Sizes w/ Optimization
+
+```bash
+# Accepts an image by it's filename & resizes & optimizes it to various sizes:
+# Resize(s): 350, 450, 550, 650, 750, 850, 950, 1150, 1250, 1350, 1450
+# Optimization(s): Compresses by 10% (ie quality is '90%')
+# USAGE: optImgs "MyImage.png"
+optImgs(){
+	base=$(basename -- "$1") # stores full filename as variable
+	ext="${base##*.}"  # extracts file extension without the '.'
+	file="${base%.*}"    # extracts just the filename without the extension
+
+
+	# Convert & notify success!
+	convert "$1" -resize 350 -quality 90 "$file"_350x."$ext";
+	echo "✓ Compressed & resized: 350px - 90% quality";
+
+	convert "$1" -resize 450 -quality 90 "$file"_450x."$ext";
+	echo "✓ Compressed & resized: 450px - 90% quality";
+
+	convert "$1" -resize 550 -quality 90 "$file"_550x."$ext";
+	echo "✓ Compressed & resized: 550px - 90% quality";
+
+	convert "$1" -resize 650 -quality 90 "$file"_650x."$ext";
+	echo "✓ Compressed & resized: 650px - 90% quality";
+
+	convert "$1" -resize 750 -quality 90 "$file"_750x."$ext";
+	echo "✓ Compressed & resized: 750px - 90% quality!";
+
+	convert "$1" -resize 850 -quality 90 "$file"_850x."$ext";
+	echo "✓ Compressed & resized: 850px - 90% quality!";
+
+	convert "$1" -resize 950 -quality 90 "$file"_950x."$ext";
+	echo "✓ Compressed & resized: 950px - 90% quality!";
+
+	convert "$1" -resize 1150 -quality 90 "$file"_1150x."$ext";
+	echo "✓ Compressed & resized: 1150px - 90% quality!";
+
+	convert "$1" -resize 1250 -quality 90 "$file"_1250x."$ext";
+	echo "✓ Compressed & resized: 1250px - 90% quality!";
+
+	convert "$1" -resize 1350 -quality 90 "$file"_1350x."$ext";
+	echo "✓ Compressed & resized: 1350px - 90% quality!";
+
+	convert "$1" -resize 1450 -quality 90 "$file"_1450x."$ext";
+	echo "✓ Compressed & resized: 1450px - 90% quality!";
+
+	convert "$1" -resize 1550 -quality 90 "$file"_1550x."$ext";
+	echo "✓ Compressed & resized: 1550px - 90% quality!";
+
+	echo "✅ $1 was converted, resized and optimized.";
+	echo " ";
+	echo " ";
+	echo "Listing directory..."
+	ld;
+}
+
+
+## USAGE: optImgs "MyImage.png"
+
+```
+
+
+---
 
 ## Converting Images
 
