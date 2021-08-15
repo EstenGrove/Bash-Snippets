@@ -10,9 +10,9 @@ The following breakpoints are merely suggestions that best represent common and 
 
 Breakpoint        Class-infix       Dimensions
 X-Small           None	            <576px
-Small	            sm	              ≥576px
-Medium	          md	              ≥768px
-Large	            lg	              ≥992px
+Small.            sm	              ≥576px
+Medium            md	              ≥768px
+Large             lg	              ≥992px
 Extra             large	xl	        ≥1200px
 Extra             xxl	              ≥1400px
 ```
