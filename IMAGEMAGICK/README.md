@@ -6,6 +6,7 @@
 - [Converting Images](#converting-images)
 - [Resizing Images](#)
 - [Convert size and Force EXACT dimensions](#convert-size-and-force-exact-dimensions)
+- [Combination Commands: Resize & Optimize etc](#resize-and-optimize)
 - [Compress/Optimize Image](#compress-or-optimize-image)
   - [Max Amount of Compression](#apply-the-max-amount-of-compression-to-an-image)
   - [Apply 25% Compression to Image](#apply-25-compression-to-image)
@@ -103,6 +104,17 @@ convert input.jpg[50%x50%] -quality 70 output.jpg
 
 
 -----------
+
+## Resize and Optimize
+
+```bash
+# Resize jpg to 300px wide & optimize by 25% (ie quality = 75%)
+convert input.jpg -resize 300 -quality 75 output.jpg
+```
+
+
+-----------
+
 
 ## Batch Processing
 
