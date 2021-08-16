@@ -7,6 +7,7 @@ Including: aliases, .bash_profile/.bashrc, conditionals, loops, variables and mo
 - [Aliases](https://github.com/EstenGrove/Bash-Snippets/blob/master/BASIC-GUIDE/README.md#aliases)
 - [Comparison Operators in Bash](#bash-comparison-operators-using-flags)
 - [Functions](#functions)
+- [Functions with Default Args](#functions-with-default-arguments)
 - [Variables](#variables)
 - [Conditionals](#conditionals)
 - [Loops](#loops-for-while-until)
@@ -75,6 +76,22 @@ greeting "Esten"
 
 # Output
 Hello Esten
+```
+
+## Functions with Default Arguments
+
+```bash
+
+# To set a default for an optional argument
+# Store the arg in a value & provide default for that value
+# Example below:
+
+
+openServer(){
+  port="${1:-8080}"
+  # do something here
+}
+
 ```
 
 -------------------
