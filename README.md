@@ -39,6 +39,8 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 ----------
 
 
+
+
 ## **Common File System Commands & Helpers**
 
 <details>
@@ -94,6 +96,26 @@ mv src/css/reports/* src/css/views/
 mv src/components/*.js src/components/shared/
 ```
 
+</details>
+
+
+----------
+
+## **Bash Shell Utils**
+Generic `bash` shell utiliites.
+
+<details>
+  <summary>Bash Utils</summary>
+  
+```bash
+# List all aliases
+alias
+  
+# List all defined bash functions in .bashrc
+declare -F
+  
+```
+  
 </details>
 
 
