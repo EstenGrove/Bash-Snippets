@@ -13,6 +13,7 @@
 - [Setting Headers](#using--setting-headers)
   - [Return ONLY headers](#return-only-the-headers)
   - [Make request w/ specific headers](#make-request-w-specific-headers)
+- [Requests With Spaces](#requests-with-spaces)
 - [Save the cURL result to a file](#save-the-result-of-a-curl-command)
 - [File Uploads](#file-uploads)
 
@@ -89,6 +90,19 @@ Last-Modified: Fri, 13 Aug 2021 13:51:31 GMT
 Connection: keep-alive
 ETag: "611678e3-11d7"
 
+```
+
+
+
+----------
+
+## Requests With Spaces
+
+```bash
+# The following is equal to a GET request w/ param(s): "http://localhost:8080/sites/site?siteName=Dummy%Example"
+
+# This is how you could encode a space in a GET request
+curl -G "http://localhost:8080/sites/site" --data-urlencode "siteName=Dummy Example"
 ```
 
 
