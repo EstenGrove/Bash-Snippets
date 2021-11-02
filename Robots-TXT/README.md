@@ -4,6 +4,13 @@ This document outlines various web crawling settings for configuring a `robots.t
 
 ---
 
+### Robots.txt Validators & Test Tools
+
+- [Live Site Validator](https://technicalseo.com/tools/robots-txt/)
+- [Google Console](https://support.google.com/webmasters/answer/6062598?hl=en&authuser=1)
+
+---
+
 ## Allow All Crawl Bots
 This means ALL web crawlers will be able to index this entire site.
 
