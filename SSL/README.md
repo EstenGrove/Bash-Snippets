@@ -37,5 +37,10 @@ The following command will generate:
 - Private Key: `certificate.key`
 
 ```bash
+# Command for CSR & Private Key
+openssl req -new -out <name-of-csr.csr> -newkey rsa:2048 -nodes -sha256 -keyout <name-of-private-key.key> -config <config-file.txt>
+
+
+## Sample Command
 openssl req -new -out certificate.csr -newkey rsa:2048 -nodes -sha256 -keyout certificate.key -config config.txt
 ```
