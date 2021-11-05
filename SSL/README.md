@@ -33,8 +33,8 @@ DNS.2 = aladvantage.com
 The below instructions are how to generate a CSR & Private Key based off a config file hosted on the target server.
 
 The following command will generate:
-- Certificate Signing Request (CSR): certificate.csr
-- Private Key: certificate.key
+- Certificate Signing Request (CSR): `certificate.csr`
+- Private Key: `certificate.key`
 
 ```bash
 openssl req -new -out certificate.csr -newkey rsa:2048 -nodes -sha256 -keyout certificate.key -config config.txt
