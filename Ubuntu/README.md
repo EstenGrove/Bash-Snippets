@@ -46,6 +46,17 @@ grep -Po '^sudo.+:\K.*$' /etc/group
 
 # Nginx Commands
 
+**Check Config:**
+
+```bash
+sudo nginx -t
+
+## Then if config is ok, restart server block
+sudo systemctl restart nginx
+```
+
+**System Start/Stop Commands:**
+
 ```bash
 # Stop server
 sudo systemctl stop nginx
