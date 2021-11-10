@@ -136,9 +136,70 @@ npm -v
 ```
 
 
+---
+
+## Nginx Config w/ React Router
+
+<details>
+  <summary>Nginx Config</summary>
+
+```bash
+# Expires map - added 11/8/2021 at 8:29 AM
+## Cache-Busting Expiry
+map $sent_http_content_type $expires {
+        default                    off;     # No cache for unknown file types
+        text/html                  epoch;   # Explicit no caching for html files (means everything is fresh from server)
+        text/css                   max;     # Caches css files for as long as possible in the browser
+        application/javascript     max;     # Caches css files for as long as possible in the browser
+        ~image/                    max;     # Caches css files for as long as possible in the browser
+        ~font/                     max;     # Caches css files for as long as possible in the browser
+}
 
 
 
+server {
+
+        root /var/www/portal.aladvantage.com/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name portal.aladvantage.com;
+
+        # Expires declaration - added 11/8/2021 at 8:29 AM
+        expires $expires;
+
+        # Added 10/19/2021 at 9:34 AM
+        ## Error page handling (works w/ React Router)
+        error_page 404 /index.html;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/portal.aladvantage.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/portal.aladvantage.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = portal.aladvantage.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80;
+        listen [::]:80;
+
+        server_name portal.aladvantage.com;
+    return 404; # managed by Certbot
+
+
+}
+```
+
+</details>
 
 
 
