@@ -48,7 +48,21 @@ openssl req -new -out certificate.csr -newkey rsa:2048 -nodes -sha256 -keyout ce
 
 ---
 
+
+
+
 ## Get SSL Info Via Bash Commands
+
+
+**Test SSL and Get Info:**
+
+```bash
+# Command Template: 
+openssl s_client -connect <domain>:<port(eg. 443)>
+
+# Example Command:
+openssl s_client -connect portal.aladvantage.com:443
+```
 
 **Check SSL Expiry:**
 
