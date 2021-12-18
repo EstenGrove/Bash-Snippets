@@ -44,3 +44,19 @@ openssl req -new -out <name-of-csr.csr> -newkey rsa:2048 -nodes -sha256 -keyout 
 ## Sample Command
 openssl req -new -out certificate.csr -newkey rsa:2048 -nodes -sha256 -keyout certificate.key -config config.txt
 ```
+
+
+---
+
+## Get SSL Info Via Bash Commands
+
+**Check SSL Expiry:**
+
+```bash
+# Command Template:
+echo | openssl s_client -servername <domain> -connect <domain>:<port(eg. 443)> 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+
+# Example Command:
+echo | openssl s_client -servername portal.aladvantage.com -connect portal.aladvantage.com:443 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+```
+
