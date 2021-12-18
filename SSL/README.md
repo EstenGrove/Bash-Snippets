@@ -56,6 +56,9 @@ openssl req -new -out certificate.csr -newkey rsa:2048 -nodes -sha256 -keyout ce
 
 **Test SSL and Get Info:**
 
+<details>
+  <summary>Test SSL via Handshake</summary>
+
 ```bash
 # Command Template: 
 openssl s_client -connect <domain>:<port(eg. 443)>
@@ -63,9 +66,15 @@ openssl s_client -connect <domain>:<port(eg. 443)>
 # Example Command:
 openssl s_client -connect portal.aladvantage.com:443
 ```
+  
+</details>
 
+  
 **Check SSL Expiry:**
-
+  
+<details>
+  <summary>Get Concise SSL Info: Expiry & Issuer</summary>
+  
 ```bash
 # Command Template:
 echo | openssl s_client -servername <domain> -connect <domain>:<port(eg. 443)> 2>/dev/null | openssl x509 -noout -issuer -subject -dates
@@ -74,3 +83,13 @@ echo | openssl s_client -servername <domain> -connect <domain>:<port(eg. 443)> 2
 echo | openssl s_client -servername portal.aladvantage.com -connect portal.aladvantage.com:443 2>/dev/null | openssl x509 -noout -issuer -subject -dates
 ```
 
+**Output:**
+
+```bash
+issuer= /C=US/O=Let's Encrypt/CN=R3
+subject= /CN=portal.aladvantage.com
+notBefore=Oct 28 10:37:55 2021 GMT
+notAfter=Jan 26 10:37:54 2022 GMT
+```
+
+</details>
