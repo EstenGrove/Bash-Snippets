@@ -38,8 +38,23 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 
 ----------
 
+## **Using `ngrok` For Localhost**
+
+<details>
+  <summary>Using ngrok</summary>
+  
+```bash
+# Syntax:
+./ngrok http <port>
+  
+# Example:
+./ngrok http 3000
+```
+  
+</details>
 
 
+--------
 
 ## **Common File System Commands & Helpers**
 
