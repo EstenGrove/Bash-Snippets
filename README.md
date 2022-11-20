@@ -38,6 +38,20 @@ An organized and detailed collection of bash scripts, snippets, helpers, aliases
 
 ----------
 
+## **Check Installed Versions for a Project**
+
+<details>
+  <summary>Check package versions</summary>
+
+```bash
+# Lists all installed packages & their versions
+npm list --depth=0
+```
+
+</details>
+
+--------
+
 ## **Using `ngrok` For Localhost**
 
 <details>
