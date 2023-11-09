@@ -55,6 +55,9 @@ For a quick set of guides and glossaries: ``` git help -g ```
 
 <details>
     <summary>Branches</summary>
+
+#### Various Git Resources:
+- [Git Branches Resource](https://www.nobledesktop.com/learn/git/git-branches)
     
 ## Create "Feature" Branch & Clone Master Into It
 The following command will create a new "feature" branch and clone the ```master``` branch's current state in to.
@@ -69,6 +72,17 @@ git push origin feature
 git branch -a
 ```
 
+### List Branches (Local/Remote)
+```bash
+# list local branches
+git branch
+
+# list remote branches
+git branch -r
+
+# list all branches (both local and remote)
+git branch -a
+```
     
 ### Create a Branch
 ```bash
