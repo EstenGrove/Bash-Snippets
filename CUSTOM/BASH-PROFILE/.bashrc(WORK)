@@ -1,0 +1,227 @@
+##################### Custom File/Folder Navigation Aliases #######################
+
+############################
+#### FOLDER SHORTCUTS #####
+###########################
+
+alias WORK='cd ~/WORK'
+alias DEV='cd ~/WORK/Dev'
+
+
+## ELDERMARK WORK FOLDERS ##
+alias EM='cd ~/WORK/Dev/Eldermark'
+alias EMR='cd ~/WORK/Dev/Eldermark/Repos'
+alias EMDS='cd ~/WORK/Dev/Eldermark/Documents'
+alias EMDL='cd ~/WORK/Dev/Eldermark/Downloads'
+
+### ELDERMARK REPOS FOLDERS ###
+alias EMAR='cd ~/WORK/Dev/Eldermark/Repos/eldermark-emar'            # EMAR REPO
+alias EMDB='cd ~/WORK/Dev/Eldermark/Repos/eldermark-emar-db'         # DATABASE REPO
+alias EMUI='cd ~/WORK/Dev/Eldermark/Repos/eldermark-emar-ui'         # UI REPO
+
+
+
+alias ld='ls -Fhla --color=auto'
+
+# History
+alias H='history'
+
+alias c='clear'
+# alias ls='ls -1a'
+
+# Navigate Back
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+alias .......='cd ../../../../../../'
+alias ........='cd ../../../../../../../'
+
+# Clear Console
+alias c='clear'
+
+
+#########################################################################
+############### GIT ALIASES, FUNCTIONS, HELPERS & SCRIPTS ###############
+#########################################################################
+
+alias gs='git status'
+alias glg='git log --graph'
+alias gls='git log --stat'
+alias glp='git log --pretty=format:"%h : %s" --graph'
+alias gr='grep --color -r' # usage gr 'some-string'
+alias gdh='git diff HEAD' # view staged/unstaged changes before commit
+alias gdn='git diff --name-only HEAD' # view staged/unstaged filenames ONLY, before commit
+alias gl1='git log --oneline --graph' # shows a oneliner for each commit w/ SHA hash.
+alias glb='git branch -a' # list all branches (ie remote/local)
+alias glt='git tag -l' # list all git tags (ie versions & 'frozen' branchs)
+
+# Provides VERY CONCISE output w/ comment and commit ID ONLY
+alias glp='git log --pretty=format:"%h : %s" --graph'
+
+################################################
+######## GIT COMMIT & PUSH/PULL HELPERS ########
+################################################
+
+# Checks for branch by name via regex or string pattern/name
+checkForBranch(){
+  git branch -a | grep "$1"
+}
+
+# Various Git commit, track, push and pull aliases & scripts
+
+# Git Add, Commit, Push to Specfic Branch ONLY
+# Checks for Empty string as args, if empty then just "git push", else "git push origin <arg>"
+acp () {
+  if [[ -n "$2" ]]; then
+    git add .; git commit; git push origin "$2"
+  else
+    git add .; git commit; git push
+  fi
+}
+
+# Git Add, Commit, Push to Specific Branch ONLY
+acpb(){
+  if [[ -n "$2" ]]; then
+    git add .; git commit; git push origin "$2"
+  else
+    git add .; git commit; git push
+  fi
+}
+
+# Git Fetch, and Pull - get the latest
+gfp () {
+  git fetch; git pull
+}
+
+# Git: Change Branch
+cb (){
+  git checkout "$1";
+}
+
+
+
+################################################
+######### GIT SEARCH & LOGGING HELPERS #########
+################################################
+
+# Various Git logging scripts & aliases
+
+# Log 'since' a date &/or time
+glsince () {
+  git log --since="$1"
+}
+
+# Log a range by passing a start and end date
+glrange () {
+    git log --after="$1" --before="$2";
+}
+
+# Log today's work since 6:00 AM
+gltoday () {
+  start_time="06:00:00"
+  now=$(date)
+
+  git log --since="$now $start_time"
+}
+
+# Log a single day's work (ie today: 00:00 AM - 23:59 PM)
+## If no 'date' argument is provided, run for today
+glday () {
+  # set time range
+  start_time="00:00"
+  end_time="23:59"
+
+  # append start/end times to target 'date'
+  start_of_day="$1 $start_time"
+  end_of_day="$1 $end_time"
+
+  # if no 'input' then run for today (ie fallback)
+  if [[ $# -eq 0 ]]; then
+    day=$(date)
+    fb_start_of_day="$day $start_time"
+    fb_end_of_day="$day $end_time"
+
+    # fallback to today
+    git log --since="$fb_start_of_day" --before="$fb_end_of_day";
+  else 
+    # execute command w/ target date from user input
+    git log --since="$start_of_day" --before="$end_of_day";
+  fi
+}
+
+#### Search Git Logs ####
+# git search all
+gsa(){
+  git log --all --grep="$1"
+}
+
+## Show log for specific date range
+## NOTE: dates must be capitalized and month is abbreviated to 3 chars (ie September => "SEP")
+# usage: glr "MAY 4 2020" "MAY 10 2020"
+glr(){
+  git log --since "$1" --until "$2"
+}
+## Show abbreviated log w/ only commitID, date, and author
+glq(){
+  git log --since "$1" --until "$2" --pretty=format:"%h %an %ad"
+}
+
+
+
+###############################################################
+#################### DISK USAGE FUNCTIONS ####################
+###############################################################
+
+
+## Get the 5 largest directories
+#du -hs * | sort -rh | head -5
+
+## Get the Total Disk Usage of Directory with a User Prompt and Nice Message!
+getsize(){
+  read -p "Which directory should I check the disk usage for? " dir
+  output="$(du -ch "$dir" | grep total)"
+  echo "The $dir directory is $output"
+
+}
+# Usage: getsize ... /somedirectory OR use '.' for current directory
+
+
+## Get 20 largest files
+#du -a <directory|blank> | sort -r -n | head -n 20
+
+
+## Get the Total Disk Usage of a dir w/o a Message
+gettotal(){
+  du -ch "$1" | grep total
+}
+# Usage: gettotal "./Documents"
+
+
+# GENERATE A RANDOM STRING OF CHARACTERS WITH A CUSTOM LENGTH
+nwps(){
+  pwgen -s "$1" 1
+}
+
+# CREATE 1 OR MORE NESTED FOLDERS FOR EACH FOLDER IN A DIRECTORY
+makeDirs(){
+  for dir in */; do mkdir "$dir"/{"$1"};done
+}
+
+
+
+
+######### NPM SCRIPTS, ALIASES & FUNCTIONS ##########
+
+## Aliases ##
+
+# Install base React deps: node-sass react-router-dom date-fns@1.30.1 prop-types
+alias ins_deps='npm i node-sass react-router-dom date-fns@1.30.1 prop-types'
+
+
+# Get all project dependencies in use
+alias deps='npm ls --depth=0'
+
+# Get more info on deps: npm long-list more
+alias nlm='npm ll'
